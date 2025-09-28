@@ -1,6 +1,6 @@
 # 从资源库下载整合包教程
 
-1. ##### 请在群里发送 `地址` 获取[资源库](https://cloud.beiming.games/s/QktY)下载地址。
+1. ##### 请在群里发送 `地址` 获取[资源库](https://cloud.beiming.games/s/QktY)下载地址。（此教程以生电服旧进服流程为例）
 
    ![image-20250928150131270](https://bu.dusays.com/2025/09/28/68d8dd4a5a967.webp)
 
@@ -40,16 +40,7 @@
 
    ![](https://bu.dusays.com/2025/09/28/68d8e1166df4e.webp)![image-20250928151902836](https://bu.dusays.com/2025/09/28/68d8e167376df.webp)
 
-9. ##### 切换分服使用***`/server`*** 你要去的服（***dt***是大厅，***sd***是本体，**sd-mirror**是镜像,**xkcz**是创造服）
+   ##### 
 
-   ![image-20250928151952071](https://bu.dusays.com/2025/09/28/68d8e198711c7.webp)
 
-10. ##### 虚空服切换维度
-
-    /warp tp cpt 超平坦维度
-
-    /spawn 回到主维度出生点
-
-    /back 回到上一次传送点![image-20250928152024926](https://bu.dusays.com/2025/09/28/68d8e1b920741.webp)![image-20250928152037957](https://bu.dusays.com/2025/09/28/68d8e1c635bf0.webp)
-
-<center>好了，现在你已经是服内一个成熟的生电玩家了，去设计实装全物品吧</center>
+<center>整合包服务器同理</center>
