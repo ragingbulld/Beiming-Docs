@@ -1,65 +1,55 @@
 # 从资源库下载整合包教程
 
-1. ##### 请在群里发送 `地址` 获取资源库下载地址。
+1. ##### 请在群里发送 `地址` 获取[资源库](https://cloud.beiming.games/s/QktY)下载地址。
+
+   ![image-20250928150131270](https://bu.dusays.com/2025/09/28/68d8dd4a5a967.webp)
 
 2. ##### 登录资源库找到“`生电服相关`”
 
-   
+   ![image-20250928150234782](https://bu.dusays.com/2025/09/28/68d8dd8a18d77.webp)
 
 3. ##### 找到“客户端”
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/Z6DDD4JBAAQGO?)
+   ![image-20250928150351378](https://bu.dusays.com/2025/09/28/68d8ddd694897.webp)![image-20250928150605434](https://bu.dusays.com/2025/09/28/68d8de5c91911.webp)
 
 4. ##### 获取下载链接
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/5GDDD4JBACQGA?)
+   复制到多线程下载器（资源库也有，此用Gopeed演示）
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/3CDDD4JBACQBA?)
+   （你要笨到牛子写的[多线程下载器教程](https://beiming.games/docs/download-boost.html)都看不懂，那你右键下载得了）
 
-5. ##### 复制到多线程下载器（资源库也有，此用Gopeed演示）
+   ![image-20250928150622369](https://bu.dusays.com/2025/09/28/68d8de6d57d66.webp)![image-20250928150704026](https://bu.dusays.com/2025/09/28/68d8de96e3f3f.webp)
 
-   （你要笨到牛子写的多线程下载器教程都看不懂，那你右键下载得了）
+   粘贴进多线程下载器即可![image-20250928150751182](https://bu.dusays.com/2025/09/28/68d8dec613f6d.webp)
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/VGDDD4JBABAD2?)
+5. ##### 导入启动器（此用pcl2为例）
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/S6DDD4JBABAAS?)
+   ![image-20250928150926790](https://bu.dusays.com/2025/09/28/68d8df25d25bf.webp)![image-20250928151000198](https://bu.dusays.com/2025/09/28/68d8df4740369.webp)
 
-6. ##### 导入启动器（此用pcl2为例）
+6. ##### 输入版本名称，随便输，不会影响使用，教程提供示例
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/W6DTD4JBACADK?)
+   ![image-20250928151019657](https://bu.dusays.com/2025/09/28/68d8df5a7224c.webp)
 
-7. ##### 输入版本名称，随便输，不会影响使用，教程提供示例
+7. ##### 下载完成即可启动，进入游戏选择多人游戏，添加服务器，在群里发送“***\**\*地址一\*\**\***”查看地址，常规情况下整合包自带地址，建议使用长期线路，如有需求使用BGP线路则需要自己导入地图
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/3ODDD4JBACQGA?)
+   ![image-20250928151136233](https://bu.dusays.com/2025/09/28/68d8dfa728b47.webp)
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/6CDDD4JBAAQAA?)
+   ![image-20250928151221207](https://bu.dusays.com/2025/09/28/68d8dfd420a03.webp)![](https://bu.dusays.com/2025/09/28/68d8e0597d835.webp)
 
-8. ##### 下载完成即可启动，进入游戏选择多人游戏，添加服务器，在群里发送“***\**\*地址一\*\**\***”查看地址，常规情况下整合包自带地址，按流程注册登录
+8. ##### 如是第一次游玩请按流程注册，之后登录即是 /l 密码
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/EGEDD4JBACAFI?)
+   ![](https://bu.dusays.com/2025/09/28/68d8e1166df4e.webp)![image-20250928151902836](https://bu.dusays.com/2025/09/28/68d8e167376df.webp)
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/TGETD4JBAAQGS?)
+9. ##### 切换分服使用***`/server`*** 你要去的服（***dt***是大厅，***sd***是本体，**sd-mirror**是镜像,**xkcz**是创造服）
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/QWETD4JBAAAEI?)
+   ![image-20250928151952071](https://bu.dusays.com/2025/09/28/68d8e198711c7.webp)
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/Q6ETD4JBADACI?)
-
-9. ##### 之后登录即是 /l 密码
-
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/T2ETD4JBACQGS?)
-
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/VOETD4JBADAES?)
-
-10. ##### 切换分服使用***`/server`*** 你要去的服（***dt***是大厅，***sd***是本体，**sd-mirror**是镜像,**xkcz**是创造服）
-
-    ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/VWETD4JBABADO?)
-
-11. ##### 虚空服切换维度
+10. ##### 虚空服切换维度
 
     /warp tp cpt 超平坦维度
 
     /spawn 回到主维度出生点
 
-    /back 回到上一次传送点
+    /back 回到上一次传送点![image-20250928152024926](https://bu.dusays.com/2025/09/28/68d8e1b920741.webp)![image-20250928152037957](https://bu.dusays.com/2025/09/28/68d8e1c635bf0.webp)
 
 <center>好了，现在你已经是服内一个成熟的生电玩家了，去设计实装全物品吧</center>
