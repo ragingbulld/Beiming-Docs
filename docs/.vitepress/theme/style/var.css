@@ -1,6 +1,3 @@
 :root {
-    --vp-button-brand-bg: #FFFFFF;
-}
-.VPButton.brand[data-v-2dba8ca9]:hover {
-    background-color: #EC3232;
+    --vp-button-brand-bg: #FF5959;
 }
