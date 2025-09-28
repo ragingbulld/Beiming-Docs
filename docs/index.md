@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "北冥·群组服"
   text: "服务器游玩指南"
-  tagline: 高性能·低延迟·多玩法
+  tagline: 🚀 高性能 · ⚡ 低延迟 · 🎮 多玩法
   image:
     src: https://bu.dusays.com/2025/09/08/68becfc70f411.webp
     alt: logo

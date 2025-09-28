@@ -24,30 +24,9 @@
   --vp-c-brand-3: #1c4fd6; /* 深蓝偏电光，压住层次 */
 }
 
-/* .vitepress/theme/style/var.css */
-.VPDoc h1 {
-  background: -webkit-linear-gradient(90deg, #3a8dff 0%, #7c4dff 50%, #b84cff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+:root {
+  animation: rainbow 12s linear infinite;
 }
-
-/* 全局 CSS */
-body h1 {
-  background: linear-gradient(
-    90deg,
-    #aaaaaa 0%,   /* 左端灰色 */
-    #6b4dff 50%,  /* 中间紫蓝 */
-    #3a8dff 100%  /* 右端亮蓝 */
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-  white-space: nowrap;
-}
-
 
 
 
