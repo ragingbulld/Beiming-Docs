@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "canvas-confetti": "^1.9.3",
     "nprogress-v2": "^1.1.10",
     "vitepress": "^2.0.0-alpha.12"
   },
