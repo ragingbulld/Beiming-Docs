@@ -78,7 +78,7 @@ export default defineConfig({
         text: '快速开始',
         collapsed: false,
         items: [
-          { text: '进入服务器', link: '/quick-start' },
+          { text: '进入服务器', link: '/redstone/test.md' },
           { text: '整合包安装', link: '/modpack-install' },
         ]
       },
