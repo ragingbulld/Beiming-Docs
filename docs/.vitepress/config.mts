@@ -20,7 +20,7 @@ export default defineConfig({
     },
     //编辑本页
     editLink: { 
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path', // 改成自己的仓库
+      pattern: 'https://github.com/ragingbulld/Beiming-Docs/edit/main/docs/:path', // 改成自己的仓库
       text: '在GitHub编辑本页'
     },
     //上次更新时间
@@ -31,6 +31,11 @@ export default defineConfig({
         timeStyle: 'medium' // 可选值full、long、medium、short
       },
     },
+    //自定义上下页名
+    docFooter: { 
+      prev: '上一页', 
+      next: '下一页', 
+    }, 
     // 🔹 顶部导航栏
     nav: [
       { text: '主页', link: '/' },
