@@ -94,8 +94,8 @@ export default defineConfig({
         text: '服务器信息',
         collapsed: false,
         items: [
-          { text: '服务器守则', link: '/server-rules' },
-          { text: '网络优化说明', link: '/network-optimization' },
+          { text: '服务器守则', link: '/rules/server-rules' },
+          { text: '生电服服规', link: '/rules/redstone-rules' },
           { text: 'FAQ', link: '/faq' },
         ]
       }
