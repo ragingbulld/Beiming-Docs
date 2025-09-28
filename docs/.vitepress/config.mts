@@ -13,7 +13,24 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo512.webp',
-
+    outline: { 
+      level: [2,4], // 显示2-4级标题
+      // level: 'deep', // 显示2-6级标题
+      label: '当前页大纲' // 文字显示
+    },
+    //编辑本页
+    editLink: { 
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path', // 改成自己的仓库
+      text: '在GitHub编辑本页'
+    },
+    //上次更新时间
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short', // 可选值full、long、medium、short
+        timeStyle: 'medium' // 可选值full、long、medium、short
+      },
+    },
     // 🔹 顶部导航栏
     nav: [
       { text: '主页', link: '/' },
