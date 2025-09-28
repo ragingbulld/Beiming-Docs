@@ -12,7 +12,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: 'https://bu.dusays.com/2025/09/08/68becfc70f411.webp',
+    logo: '/logo512.webp',
 
     // 🔹 顶部导航栏
     nav: [
@@ -21,7 +21,57 @@ export default defineConfig({
       { text: '服务器守则', link: '/server-rules' },
       { text: '常见问题', link: '/faq' },
     ],
-
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '<Application ID>',
+        apiKey: '<Search-Only API Key>',
+        indexName: '<INDEX_NAME>',
+        locales: {
+          root: {
+            placeholder: '搜索文档',
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: '清除查询条件',
+                  resetButtonAriaLabel: '清除查询条件',
+                  cancelButtonText: '取消',
+                  cancelButtonAriaLabel: '取消'
+                },
+                startScreen: {
+                  recentSearchesTitle: '搜索历史',
+                  noRecentSearchesText: '没有搜索历史',
+                  saveRecentSearchButtonTitle: '保存至搜索历史',
+                  removeRecentSearchButtonTitle: '从搜索历史中移除',
+                  favoriteSearchesTitle: '收藏',
+                  removeFavoriteSearchButtonTitle: '从收藏中移除'
+                },
+                errorScreen: {
+                  titleText: '无法获取结果',
+                  helpText: '你可能需要检查你的网络连接'
+                },
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                  closeText: '关闭',
+                  searchByText: '搜索提供者'
+                },
+                noResultsScreen: {
+                  noResultsText: '无法找到相关结果',
+                  suggestedQueryText: '你可以尝试查询',
+                  reportMissingResultsText: '你认为该查询应该有结果？',
+                  reportMissingResultsLinkText: '点击反馈'
+                },
+              },
+            },
+          },
+        },
+      },
+    },
     // 🔹 侧边栏
     sidebar: [
       {
