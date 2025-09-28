@@ -24,9 +24,9 @@ export default defineConfig({
     search: {
       provider: 'algolia',
       options: {
-        appId: '<Application ID>',
-        apiKey: '<Search-Only API Key>',
-        indexName: '<INDEX_NAME>',
+        appId: '74UVGNCPRE',
+        apiKey: 'b04e083a8829f21d0bda88ac50d89bdd',
+        indexName: 'docs',
         locales: {
           root: {
             placeholder: '搜索文档',
