@@ -110,7 +110,7 @@ export default defineConfig({
         text: '玩法指南',
         collapsed: false,
         items: [
-          { text: '生电服务器', items: [ { text: '如何使用carpet', link: '/redstone/intro-history' }, { text: '红石机器使用事项', link: '/main/intro-features' } ] },
+          { text: '生电服务器', items: [{ text: '生电白名单', link: '/gameplay/redstone' }, { text: '如何使用carpet', link: '/redstone/intro-history' }, { text: '红石机器使用事项', link: '/main/intro-features' } ] },
           { text: '整合包服务器', items: [ { text: '如何下载整合包', link: '/modpacks/intro-history' } ] },
         ]
       },
