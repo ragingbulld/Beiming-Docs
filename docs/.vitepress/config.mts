@@ -10,7 +10,9 @@ export default defineConfig({
     // 移动端适配
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
   ],
-
+  markdown: {
+    lineNumbers: true, // 代码块显示行号
+  },
   themeConfig: {
     logo: '/logo512.webp',
     outline: { 
