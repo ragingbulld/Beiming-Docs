@@ -12,3 +12,32 @@
 .VPFeatures .items .item:hover {
   transform: translateY(-5px);
 }
+:root {
+  --vp-c-brand-1: #c83284; /* 深粉，偏玫红，饱和但不暗 */
+  --vp-c-brand-2: #e14c9d; /* 中粉，亮度提升一点 */
+  --vp-c-brand-3: #f06fb3; /* 浅粉，带点柔和光感 */
+}
+
+.dark {
+  --vp-c-brand-1: #4c8dff; /* 明亮的天空蓝 */
+  --vp-c-brand-2: #2979ff; /* 鲜艳的亮蓝（主色调） */
+  --vp-c-brand-3: #1c4fd6; /* 深蓝偏电光，压住层次 */
+}
+
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-filter: blur(40px);
+}
+/* .vitepress/theme/style/var.css */
+.VPDoc h1 {
+  background: -webkit-linear-gradient(90deg, #3a8dff 0%, #7c4dff 50%, #b84cff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

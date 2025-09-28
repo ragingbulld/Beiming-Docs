@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "北冥·群组服",
+  title: "北冥文档库",
   description: "Minecraft 服务器游玩指南",
   head: [
     // 网站图标（浏览器标签页）
