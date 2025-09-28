@@ -1,12 +1,17 @@
 import { defineConfig } from 'vitepress'
-import { nav } from './configs'
 
+const base = "/beiming-docs/"; 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "北冥·群组服",
   description: "服务器游玩指南",
+  head: [
+    // 配置网站的图标（显示在浏览器的 tab 上）
+    ["link", { rel: "icon", href: `/favicon.ico` }],
+  ],
   themeConfig: {
     logo: '/logo512.webp',
+    
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

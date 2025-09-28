@@ -6,6 +6,9 @@ hero:
   name: "北冥·群组服"
   text: "服务器游玩指南"
   tagline: 生电·整合包·服务器守则
+  image:
+    src: /logo512.webp
+    alt: logo
   actions:
     - theme: brand
       text: 快速开始
