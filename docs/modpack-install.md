@@ -4,7 +4,7 @@
 
 2. ##### 登录资源库找到“`生电服相关`”
 
-   ![img](http://www.kdocs.cn/api/v3/office/copy/SnlsUXVUMGRyYkl1NHpXZ0RheCtkRFNhcWpaNkpoTHR0MkZIUXlJcGhsdU9vUkk2dzdCbzloK0hoWjdqd3dOUFl4aE50Q3gydG11Mk1GR2hPZjJsYWU1OFRxemRxZlhRNHBoSG5KSUZqWkVNa3VrbEEzcDlmdnNtQndqYmllb1BiSjZNbjFLMlIwVkZLMmsrNmQwaW40bG1NaGdwVWFvdjJxVkhnb3Zmcm5EVzBqbEtMVDZXNndZbFk4UWR1eXpobUc5YWhWRHFCelNFQnpqa0hFeTM1Rk54TTIvNDVzWWpRU3d1RTRjYXlVRndxNTVMU25rcEcydkQwTmVWOGhBSDlSZWt5M0hXQnF3PQ==/attach/object/QCDDD4JBABQEK?)
+   
 
 3. ##### 找到“客户端”
 
@@ -62,4 +62,4 @@
 
     /back 回到上一次传送点
 
-<center>好了，现在你已经是服内一个成熟的生电玩家了，去设计实装全物品吧<center/>
+<center>好了，现在你已经是服内一个成熟的生电玩家了，去设计实装全物品吧</center>
