@@ -1,1652 +1,317 @@
+# 部署 VitePress 站点 
 
-Skip to content
-VitePress
-Main Navigation
-首页
+以下指南基于一些前提：
 
-VitePress 1.6.3
-更新日志
+- VitePress 站点位于项目的 `docs` 目录中。
 
-Sidebar Navigation
-介绍
-基础配置
+- 你使用的是默认的生成输出目录 （`.vitepress/dist`）。
 
-快速上手
+- VitePress 作为本地依赖项安装在项目中，并且你已在 `package.json` 中设置以下脚本：
 
-配置
+  package.json
 
-页面
+- ```
+  {
+    "scripts": {
+      "docs:build": "vitepress build docs",
+      "docs:preview": "vitepress preview docs"
+    }
+  }
+  ```
 
-Frontmatter
-进阶玩法
+## 本地构建与测试 
 
-Markdown
+可以运行以下命令来构建文档：
 
-团队
+```
+$ npm run docs:build
+```
 
-多语言
+构建文档后，通过运行以下命令可以在本地预览它：
 
-DocSearch
+```
+$ npm run docs:preview
+```
 
-静态部署
+`preview` 命令将启动一个本地静态 Web 服务 `http://localhost:4173`，该服务以 `.vitepress/dist` 作为源文件。这是检查生产版本在本地环境中是否正常的一种简单方法。
 
-样式美化
+可以通过传递 `--port` 作为参数来配置服务器的端口。
 
-组件
+1. ```
+   {
+     "scripts": {
+       "docs:preview": "vitepress preview docs --port 8080"
+     }
+   }
+   ```
 
-布局插槽
+   现在 `docs:preview` 方法将会在 `http://localhost:8080` 启动服务。
 
-插件
+## 设定 public 根目录 
+
+默认情况下，我们假设站点将部署在域名 (`/`) 的根路径上。如果站点在子路径中提供服务，例如 `https://mywebsite.com/blog/`，则需要在 VitePress 配置中将 [`base`](https://vitepress.dev/zh/reference/site-config#base) 选项设置为 `'/blog/'`。
+
+**例**：如果你使用的是 Github（或 GitLab）页面并部署到 `user.github.io/repo/`，请将 `base` 设置为 `/repo/`。
+
+## HTTP 缓存标头 
+
+如果可以控制生产服务器上的 HTTP 标头，则可以配置 `cache-control` 标头以在重复访问时获得更好的性能。
+
+生产版本对静态资源 (JavaScript、CSS 和其他非 `public` 目录中的导入资源) 使用哈希文件名。如果你使用浏览器开发工具的网络选项卡查看生产预览，你将看到类似 `app.4f283b18.js` 的文件。
+
+此哈希 `4f283b18` 是从此文件的内容生成的。相同的哈希 URL 保证提供相同的文件内容——如果内容更改，URL 也会更改。这意味着你可以安全地为这些文件使用最强的缓存标头。所有此类文件都将放置在输出目录的 `assets/` 中，因此你可以为它们配置以下标头：
+
+```
+Cache-Control: max-age=31536000,immutable
+```
+
+<details class="details custom-block"><slot name="internal-main-summary"></slot><slot><div class="language-"><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span></span></span><span class="line"><span></span></span><span class="line"><span></span></span></code></pre></div><p><code></code><a href="https://vitepress.dev/zh/guide/asset-handling#the-public-directory"></a><code></code></p><p><a href="https://docs.netlify.com/routing/headers/" target="_blank" rel="noreferrer"></a></p></slot></details>
+
+<details class="details custom-block"><slot name="internal-main-summary"></slot><slot><div class="language-"><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span></span></span><span class="line"><span></span></span><span class="line"><span></span></span></code></pre></div><p><code></code><a href="https://vitepress.dev/zh/guide/asset-handling#the-public-directory"></a><code></code></p><p><a href="https://docs.netlify.com/routing/headers/" target="_blank" rel="noreferrer"></a></p></slot></details>
+
+<details class="details custom-block"><slot name="internal-main-summary"></slot><slot><div class="language-json"><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span></code></pre></div><p><code></code></p><p><a href="https://vercel.com/docs/concepts/projects/project-configuration#headers" target="_blank" rel="noreferrer"></a></p></slot></details>
+
+<details class="details custom-block"><slot name="internal-main-summary"></slot><slot><div class="language-json"><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"></span></span></code></pre></div><p><code></code></p><p><a href="https://vercel.com/docs/concepts/projects/project-configuration#headers" target="_blank" rel="noreferrer"></a></p></slot></details>
+
+## 各平台部署指南 
 
-更新及卸载
+### Netlify / Vercel / Cloudflare Pages / AWS Amplify / Render 
 
-搭建导航
+使用仪表板创建新项目并更改这些设置：
 
-永久链接
-其他站点
-当前页大纲
+- **构建命令：** `npm run docs:build`
+- **输出目录：** `docs/.vitepress/dist`
+- **node 版本：** `20` (或更高版本)
 
-    时间线
-    谷歌分析
-    图片缩放
-    看板娘
-    浏览量
-    自动侧边栏
-    Todo
-    代码组图标
-    禁用F12
-    切换路由进度条
-    Mermaid
-    评论
-        安装giscus
-        开启讨论
-        生成数据
-        安装使用
-
-插件
-
-更新: 2025/7/17 字数: 3828 字
-
-时长: 17 分钟
-时间线
-
-采用了 @HanochMa/vitepress-markdown-timeline 的项目
-
-Demo：https://hanochma.github.io/daily/2023-04
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-markdown-timeline
-
-1
-
-在 config.mts 中注册 markdown 解析插件
-
-import timeline from "vitepress-markdown-timeline"; 
-
-export default {
-  markdown: { 
-    //行号显示
-    lineNumbers: true, 
-
-    //时间线
-    config: (md) => {
-      md.use(timeline);
-    },
-  }, 
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-
-在 .vitepress/theme/index.ts 中引入时间线样式
-
-说明
-
-如果你没有这个文件，就自己新建
-
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
-
-// 只需添加以下一行代码，引入时间线样式
-import "vitepress-markdown-timeline/dist/theme/index.css";
-
-export default {
-  extends: DefaultTheme,
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-最后我们在markdown文件中，按格式使用即可
-
-输入：
-
-::: timeline 2023-04-24
-- 一个非常棒的开源项目 H5-Dooring 目前 star 3.1k
-  - 开源地址 https://github.com/MrXujiang/h5-Dooring
-  - 基本介绍 http://h5.dooring.cn/doc/zh/guide/
-- 《深入浅出webpack》 http://webpack.wuhaolin.cn/
-:::
-
-::: timeline 2023-04-23
-:::
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-谷歌分析
-
-利用插件 google-analytics ，来查看网站访问量
-
-这里我们用 @ZhongxuYang/vitepress-plugin-google-analytics 的插件
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-plugin-google-analytics
-
-1
-
-在 .vitepress/theme/index.ts 中引入
-
-// .vitepress/theme/index.ts
-import DefaultTheme from "vitepress/theme"
-import googleAnalytics from 'vitepress-plugin-google-analytics'
-
-export default {
-  extends: DefaultTheme,
-  enhanceApp({app}) {
-    googleAnalytics({
-      id: 'G-******', //跟踪ID，在analytics.google.com注册即可
-    }),
-  },
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-图片缩放
-
-Vuepress是可以直接安装插件 medium-zoom 的，非常好用
-
-但是Vitepress直接用不了，在 vitepress的issues中找到了方法#854
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D medium-zoom
-
-1
-
-在 .vitepress/theme/index.ts 添加如下代码，并保存
-
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
-
-import mediumZoom from 'medium-zoom';
-import { onMounted, watch, nextTick } from 'vue';
-import { useRoute } from 'vitepress';
-
-export default {
-  extends: DefaultTheme,
-
-  setup() {
-    const route = useRoute();
-    const initZoom = () => {
-      // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
-      mediumZoom('.main img', { background: 'var(--vp-c-bg)' }); // 不显式添加{data-zoomable}的情况下为所有图像启用此功能
-    };
-    onMounted(() => {
-      initZoom();
-    });
-    watch(
-      () => route.path,
-      () => nextTick(() => initZoom())
-    );
-  },
-
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-
-点击图片后，还是能看到导航栏，加一个遮挡样式
-
-在 .vitepress/theme/style/var.css 中加入如下代码，并保存
-
-/* .vitepress/theme/style/var.css */
-
-.medium-zoom-overlay {
-  z-index: 30;
-}
-
-.medium-zoom-image {
-  z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-
-测试一下效果，还不错
-
-但是
-
-有个小bug，每次修改完需要刷新才能起效，不过不影响使用
-
-看板娘
-
-第一次接触的人会比较懵，其实就是在右下角有个二次元的人物，类似电子宠物
-
-这里使用 @xinlei3166/vitepress-theme-website 的 Live2D 插件
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-theme-website
-
-1
-
-在 .vitepress/theme/index.ts 粘贴下面代码并保存
-
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
-
-import { useLive2d } from 'vitepress-theme-website'
-
-export default {
-  extends: DefaultTheme,
-
-  setup() {
-
-    //看板娘
-    useLive2d({
-      enable: true,
-      model: {
-        url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/hibiki/hibiki.model.json'
-      },
-      display: {
-        position: 'right',
-        width: '135px',
-        height: '300px',
-        xOffset: '35px',
-        yOffset: '5px'
-      },
-      mobile: {
-        show: true
-      },
-      react: {
-        opacity: 0.8
-      }
-    })
-
+WARNING
+
+不要为 HTML 代码启用 *Auto Minify* 等选项。它将从输出中删除对 Vue 有意义的注释。如果被删除，你可能会看到激活不匹配错误。
+
+### GitHub Pages 
+
+在项目的 `.github/workflows` 目录中创建一个名为 `deploy.yml` 的文件，其中包含这样的内容：
+
+.github/workflows/deploy.yml
+
+1. ```
+   # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
+   #
+   name: Deploy VitePress site to Pages
+   
+   on:
+     # 在针对 `main` 分支的推送上运行。如果你
+     # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+     push:
+       branches: [main]
+   
+     # 允许你从 Actions 选项卡手动运行此工作流程
+     workflow_dispatch:
+   
+   # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+   permissions:
+     contents: read
+     pages: write
+     id-token: write
+   
+   # 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+   # 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+   concurrency:
+     group: pages
+     cancel-in-progress: false
+   
+   jobs:
+     # 构建工作
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout
+           uses: actions/checkout@v4
+           with:
+             fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+         # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消此区域注释
+         #   with:
+         #     version: 9
+         # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+         - name: Setup Node
+           uses: actions/setup-node@v4
+           with:
+             node-version: 22
+             cache: npm # 或 pnpm / yarn
+         - name: Setup Pages
+           uses: actions/configure-pages@v4
+         - name: Install dependencies
+           run: npm ci # 或 pnpm install / yarn install / bun install
+         - name: Build with VitePress
+           run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+         - name: Upload artifact
+           uses: actions/upload-pages-artifact@v3
+           with:
+             path: docs/.vitepress/dist
+   
+     # 部署工作
+     deploy:
+       environment:
+         name: github-pages
+         url: ${{ steps.deployment.outputs.page_url }}
+       needs: build
+       runs-on: ubuntu-latest
+       name: Deploy
+       steps:
+         - name: Deploy to GitHub Pages
+           id: deployment
+           uses: actions/deploy-pages@v4
+   ```
+
+   WARNING
+
+   确保 VitePress 中的 `base` 选项配置正确。有关更多详细信息，请参阅[设置根路径](https://vitepress.dev/zh/guide/deploy#setting-a-public-base-path)。
+
+2. 在存储库设置中的“Pages”菜单项下，选择“Build and deployment > Source > GitHub Actions”。
+
+3. 将更改推送到 `main` 分支并等待 GitHub Action 工作流完成。你应该看到站点部署到 `https://<username>.github.io/[repository]/` 或 `https://<custom-domain>/`，这取决于你的设置。你的站点将在每次推送到 `main` 分支时自动部署。
+
+### GitLab Pages 
+
+如果你想部署到 `https://<username> .gitlab.io/<repository> /`，将 VitePress 配置中的 `outDir` 设置为 `../public`。将 `base` 选项配置为 `'/<repository>/'`。
+
+在项目的根目录中创建一个名为 `.gitlab-ci.yml` 的文件，其中包含以下内容。每当你更改内容时，这都会构建和部署你的站点：
+
+.gitlab-ci.yml
+
+1. ```
+   image: node:18
+   pages:
+     cache:
+       paths:
+         - node_modules/
+     script:
+       # - apk add git # 如果你使用的是像 alpine 这样的小型 docker 镜像，并且启用了 lastUpdated，请取消注释
+       - npm install
+       - npm run docs:build
+     artifacts:
+       paths:
+         - public
+     only:
+       - main
+   ```
+
+### Azure 静态 web 应用 
+
+1. 参考[官方文档](https://docs.microsoft.com/en-us/azure/static-web-apps/build-configuration)。
+2. 在配置文件中设置这些值 (并删除不需要的值，如 `api_location`)：
+   - **`app_location`**: `/`
+   - **`output_location`**: `docs/.vitepress/dist`
+   - **`app_build_command`**: `npm run docs:build`
+
+### Firebase 
+
+在项目的根目录下创建 `firebase.json` 和 `.firebaserc`：
+
+`firebase.json`:
+
+firebase.json
+
+```
+{
+  "hosting": {
+    "public": "docs/.vitepress/dist",
+    "ignore": []
   }
 }
+```
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
+`.firebaserc`:
 
-想要更换模型在 @iCharlesZ 这里找，替换 model 中的 url 链接即可
+.firebaserc
 
-useLive2d({
-  model: {
-  url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/bilibili-22/index.json'
+```
+{
+  "projects": {
+    "default": "<YOUR_FIREBASE_ID>"
   }
-})
+}
+```
 
-1
-2
-3
-4
-5
-浏览量
+运行 `npm run docs:build` 后，运行此命令进行部署：
 
-基本上使用的是 不蒜子，免费的且足够好用
-pnpm
-yarn
-npm
-bun
+1. ```
+   firebase deploy
+   ```
 
-pnpm add -D busuanzi.pure.js
+### Surge 
 
-1
+运行 `npm run docs:build` 后，运行此命令进行部署：
 
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
+1. ```
+   npx surge docs/.vitepress/dist
+   ```
 
-import { inBrowser } from 'vitepress'
-import busuanzi from 'busuanzi.pure.js'
+### Heroku 
 
-export default {
-  extends: DefaultTheme,
+参考 [`heroku-buildpack-static`](https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-static) 中给出的文档和指南。
 
-  enhanceApp({ app , router }) {
-    if (inBrowser) {
-      router.onAfterRouteChanged = () => {
-        busuanzi.fetch()
-      }
+使用以下内容在项目的根目录中创建一个名为 `static.json` 的文件：
+
+static.json
+
+1. ```
+   {
+     "root": "docs/.vitepress/dist"
+   }
+   ```
+
+### Edgio 
+
+请参阅[创建并部署 VitePress 应用程序到 Edgio](https://docs.edg.io/guides/vitepress)。
+
+### Kinsta 静态站点托管 
+
+你可以按照这些[说明](https://kinsta.com/docs/vitepress-static-site-example/) 在 [Kinsta](https://kinsta.com/static-site-hosting/) 上部署 VitePress 站点。
+
+### Stormkit 
+
+你可以按照这些[说明](https://stormkit.io/blog/how-to-deploy-vitepress)将你的 VitePress 项目部署到 [Stormkit](https://www.stormkit.io)。
+
+### Nginx 
+
+下面是一个 Nginx 服务器块配置示例。此配置包括对基于文本的常见资源的 gzip 压缩、使用适当缓存头为 VitePress 站点静态文件提供服务的规则以及处理 `cleanUrls: true` 的方法。
+
+```
+server {
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+    listen 80;
+    server_name _;
+    index index.html;
+
+    location / {
+        # content location
+        root /app;
+
+        # exact matches -> reverse clean urls -> folders -> not found
+        try_files $uri $uri.html $uri/ =404;
+
+        # non existent pages
+        error_page 404 /404.html;
+
+        # a folder without index.html raises 403 in this setup
+        error_page 403 /404.html;
+
+        # adjust caching headers
+        # files in the assets folder have hashes filenames
+        location ~* ^/assets/ {
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+        }
     }
-  },
-  
 }
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-
-使用就很简单了，复制到页面中使用即可
-
-说明
-
-本地开发出现数字即算成功，等你部署后会显示正确的数值
-
-本站总访问量 <span id="busuanzi_value_site_pv" /> 次
-本站访客数 <span id="busuanzi_value_site_uv" /> 人次
-
-1
-2
-
-但是这也不好看啊，那就根据自己需求选择封装吧
-
-封装演示
-
-    仅首页显示：组件使用示例
-
-    所有页面底部：插槽使用示例
-
-自动侧边栏
-
-发现一款自动侧边栏，简单好用 @jooy2/vitepress-sidebar
-
-安装文档：https://vitepress-sidebar.jooy2.com/guide/getting-started
-pnpm
-yarn
-npm
-
-pnpm add -D vitepress-sidebar
-
-1
-
-在 configs.mts 中引入配置，可以根据 作者api文档 按需修改
-
-// .vitepress/configs.mts
-import { generateSidebar } from 'vitepress-sidebar';
-
-const vitepressSidebarOptions = {
-  /* Options... */
-};
-
-export default defineConfig({
-  themeConfig: {
-    sidebar: generateSidebar({
-      /*
-       * For detailed instructions, see the links below:
-       * https://vitepress-sidebar.jooy2.com/guide/api
-       */
-      documentRootPath: '/docs', //文档根目录
-      // scanStartPath: null,
-      // resolvePath: null,
-      // useTitleFromFileHeading: true,
-      // useTitleFromFrontmatter: true,
-      // frontmatterTitleFieldName: 'title',
-      // useFolderTitleFromIndexFile: false, //是否使用层级首页文件名做分级标题
-      // useFolderLinkFromIndexFile: false, //是否链接至层级首页文件
-      // hyphenToSpace: true,
-      // underscoreToSpace: true,
-      // capitalizeFirst: false,
-      // capitalizeEachWords: false,
-      collapsed: false, //折叠组关闭
-      collapseDepth: 2, //折叠组2级菜单
-      // sortMenusByName: false,
-      // sortMenusByFrontmatterOrder: false,
-      // sortMenusByFrontmatterDate: false,
-      // sortMenusOrderByDescending: false,
-      // sortMenusOrderNumericallyFromTitle: false,
-      // sortMenusOrderNumericallyFromLink: false,
-      // frontmatterOrderDefaultValue: 0,
-      // manualSortFileNameByPriority: ['first.md', 'second', 'third.md'], //手动排序，文件夹不用带后缀
-      removePrefixAfterOrdering: false, //删除前缀，必须与prefixSeparator一起使用
-      prefixSeparator: '.', //删除前缀的符号
-      // excludeFiles: ['first.md', 'secret.md'],
-      // excludeFilesByFrontmatterFieldName: 'exclude',
-      // excludeFolders: ['secret-folder'],
-      // includeDotFiles: false,
-      // includeRootIndexFile: false,
-      // includeFolderIndexFile: false, //是否包含层级主页
-      // includeEmptyFolder: false,
-      // rootGroupText: 'Contents',
-      // rootGroupLink: 'https://github.com/jooy2',
-      // rootGroupCollapsed: false,
-      // convertSameNameSubFileToGroupIndexPage: false,
-      // folderLinkNotIncludesFileName: false,
-      // keepMarkdownSyntaxFromTitle: false,
-      // debugPrint: false,
-    }),
-  },
-})
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-
-为了避免安装插件影响教程，就写一个简单的示例
-
-stackblitz演示：https://stackblitz.com/edit/vite-y1rga7
-
-    等待生成后可查看，左侧是目录，右侧是页面
-
-    注意：插件在读取目录之后，你再修改文件名，需要重启才能生效
-
-Todo
-
-为什么Vitepress没有任务列表，在 issues#1923 和 issues#413 里找到了这个问题
-
-开发者认为
-
-Vitepress并不需要这个，也可以通过 markdown-it 实现，但 vitepress集成的markdown-it 并没有此功能
-
-看到推荐的 markdown-it-task-lists 年久失修，找了一下可以使用 markdown-it-task-checkbox 实现
-
-我们需要用到另一款插件：markdown-it-task-checkbox
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D markdown-it-task-checkbox
-
-1
-
-以下配置方式由 Aurorxa 提供
-
-// .vitepress/config.mts
-import markdownItTaskCheckbox from 'markdown-it-task-checkbox'
-
-export default defineConfig({
-  markdown: {
-    config: (md) => {
-      md.use(markdownItTaskCheckbox) //todo
-    }
-  },
-})
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-
-输入：
-
-- [ ] 吃饭
-- [ ] 睡觉
-- [x] 打豆豆
-
-1
-2
-3
-
-输出：
-
-    吃饭
-    睡觉
-    打豆豆
-
-觉得不好看，可以使用 Aurorxa 提供的样式
-
-/* checkbox 颜色设置 */
-li.task-list-item {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  /* margin: 2px 0 0; */
-  list-style: inherit;
-}
-
-/* Target the last child element to push it to the next line */
-li.task-list-item ul:last-child {
-  flex-basis: 100%;
-  margin-right: 0;
-}
-
-li.task-list-item input[type="checkbox"] {
-  position: relative;
-  width: 13px;
-  height: 13px;
-  line-height: 12px;
-  margin-right: 8px;
-  border: 1px solid #949494;
-
-  -webkit-appearance: none;
-  appearance: none;
-  -moz-appearance: none;
-}
-
-li.task-list-item input[type="checkbox"]:after {
-  position: absolute;
-  top: 0;
-  color: #000;
-  width: 13px;
-  height: 13px;
-  display: inline-block;
-  visibility: visible;
-  padding-left: 0;
-  text-align: center;
-  content: " ";
-  border-radius: 3px;
-}
-
-li.task-list-item input[type="checkbox"]:checked {
-  background-color: var(--vp-c-brand);
-}
-
-li.task-list-item input[type="checkbox"]:checked::after {
-  content: "✓";
-  color: #fff;
-  line-height: 13px;
-  font-size: 10px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.timeline-dot {
-  color: #7f8c8d;
-}
-
-.task-list {
-  margin: 0 !important;
-}
-
-li.task-list-item p {
-  display: flex;
-  margin: 0;
-  align-items: center;
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-
-然后在 index.css 中引入生效
-
-/* .vitepress/theme/style/index.css */
-@import './task-list.css';
-
-1
-2
-
-当然你也可以直接直接使用 emoji表情 ，懒人方式
-
-    ✅ 吃饭
-
-    ⬜ 睡觉
-
-代码组图标
-
-使用的是 @yuyinws/vitepress-plugin-group-icons
-
-参照教程安装：https://vpgi.vercel.app/
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-plugin-group-icons
-
-1
-
-然后在 config.mts 中配置
-
-groupIconMdPlugin 报错？
-
-请备份配置及文件后，重新安装VitePress
-
-// .vitepress/config.mts
-import { defineConfig } from 'vitepress'
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-
-export default defineConfig({
-
-  markdown: {
-    config(md) { 
-      md.use(groupIconMdPlugin) //代码组图标
-    },
-  },
-
-  vite: { 
-    plugins: [
-      groupIconVitePlugin() //代码组图标
-    ],
-  },
-
-})
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-
-最后还需要再 index.ts 中引入样式
-
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme'
-
-import 'virtual:group-icons.css' //代码组样式
-
-export default {
-  extends: DefaultTheme,
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-
-使用时，请确保代码后有对应的文字触发
-
-::: code-group
-```sh [pnpm]
-pnpm -v
 ```
 
-```sh [yarn]
-yarn -v
-```
+本配置默认已构建的 VitePress 站点位于服务器上的 `/app` 目录中。如果站点文件位于其他位置，请相应调整 `root` 指令。
 
-```sh [bun]
-bun -v
-```
-:::
+不要默认为 index.html
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
+try_files 解析不能像其他 Vue 应用那样默认为 index.html。这会导致页面状态处于无效。
 
-已经内置的常用图标有
-
-export const builtInIcons: Record<string, string> = {
-  // package manager
-  pnpm: 'logos:pnpm',
-  npm: 'logos:npm-icon',
-  yarn: 'logos:yarn',
-  bun: 'logos:bun',
-  // framework
-  vue: 'logos:vue',
-  svelte: 'logos:svelte-icon',
-  angular: 'logos:angular-icon',
-  react: 'logos:react',
-  next: 'logos:nextjs-icon',
-  nuxt: 'logos:nuxt-icon',
-  solid: 'logos:solidjs-icon',
-  // bundler
-  rollup: 'logos:rollupjs',
-  webpack: 'logos:webpack',
-  vite: 'logos:vitejs',
-  esbuild: 'logos:esbuild',
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-
-那么如何自定义呢，我们先在 iconify 中找到中意的图标
-
-说明
-
-    本地图标格式：只能使用相对路径
-
-    远程图标格式：必须是 logos:***
-
-图标名复制后，可以在 config.mts 中配置
-
-// .vitepress/config.mts
-import { defineConfig } from 'vitepress'
-import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
-
-export default defineConfig({
-
-  markdown: {
-    config(md) {
-      md.use(groupIconMdPlugin) //代码组图标
-    },
-  },
-
-  vite: {
-    plugins: [
-      groupIconVitePlugin({ 
-        customIcon: {
-          ts: localIconLoader(import.meta.url, '../public/svg/typescript.svg'), //本地ts图标导入
-          js: 'logos:javascript', //js图标
-          md: 'logos:markdown', //markdown图标
-          css: 'logos:css-3', //css图标
-        },
-      })
-    ],
-  },
-
-})
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-
-来吧看看，效果如何
-ts
-js
-md
-css
-
-console.log("I'm TypeScript");
-
-1
-禁用F12
-
-使用的是 @cellinlab/vitepress-protect-plugin
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-protect-plugin
-
-1
-
-然后在 config.mts 中配置，不用的功能不配置即可
-
-import { defineConfig } from "vitepress"
-import vitepressProtectPlugin from "vitepress-protect-plugin"
-
-export default defineConfig({
-  // other VitePress configs...
-  vite: {
-    plugins: [
-      vitepressProtectPlugin({
-        disableF12: true, // 禁用F12开发者模式
-        disableCopy: true, // 禁用文本复制
-        disableSelect: true, // 禁用文本选择
-      }),
-    ],
-  },
-})
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-切换路由进度条
-
-当你切换页面，顶部会显示进度条，使用的是 @Skyleen77/nprogress-v2
-
-说明
-
-本方式由 Aurorxa 提供推送 #36
-
-先安装 nprogress-v2
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D nprogress-v2
-
-1
-
-然后再 index.ts 中配置，即可生效
-
-// .vitepress/theme/index.ts
-
-import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
-import 'nprogress-v2/dist/index.css' // 进度条样式
-
-if (inBrowser) {
-      NProgress.configure({ showSpinner: false })
-      router.onBeforeRouteChange = () => {
-        NProgress.start() // 开始进度条
-      }
-      router.onAfterRouteChanged = () => {
-         busuanzi.fetch()
-         NProgress.done() // 停止进度条
-      }
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-Mermaid
-
-根据 VitePress Plugin Mermaid插件官网 的教程安装依赖
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-plugin-mermaid
-
-1
-
-在 config.mts 中进行配置
-
-import { withMermaid } from 'vitepress-plugin-mermaid'
-
-export default defineConfig({ 
-
-})
-
-export default withMermaid( 
-  defineConfig({
-
-    mermaid: {
-      // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
-    },
-    // optionally set additional config for plugin itself with MermaidPluginConfig
-    mermaidPlugin: {
-      class: "mermaid my-class", // set additional css classes for parent container 
-    },
-
-  })
-)
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-
-如果报错了页面打不开，你还需要安装如下几个依赖
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D @braintree/sanitize-url cytoscape cytoscape-cose-bilkent dayjs debug
-
-1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-输入：
-
-```mermaid
-flowchart LR
-  Start --> Stop
-```
-
-1
-2
-3
-4
-
-输出：
-
-Start
-
-Stop
-
-输入：
-
-```mermaid
-graph LR
-    A[Java 数据类型] --> B[原始数据类型]
-    A[Java 数据类型] --> C[引用数据类型]
-    
-    B --> D[整数类型]
-    B --> E[浮点类型]
-    B --> F[字符类型]
-    B --> G[布尔类型]
-    
-    D --> H[int]
-    D --> I[long]
-    D --> J[short]
-    D --> K[byte]
-    
-    E --> L[float]
-    E --> M[double]
-    
-    F --> N[char]
-    
-    G --> O[boolean]
-    
-    C --> P[类]
-    C --> Q[接口]
-    C --> R[数组]
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-
-输出：
-
-Java 数据类型
-
-原始数据类型
-
-引用数据类型
-
-整数类型
-
-浮点类型
-
-字符类型
-
-布尔类型
-
-int
-
-long
-
-short
-
-byte
-
-float
-
-double
-
-char
-
-boolean
-
-类
-
-接口
-
-数组
-
-更多使用方式，请查看 VitePress Plugin Mermaid官网
-评论
-
-从个人角度而言，Giscus 最佳，就用它演示，其他的这里就不赘述了
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-安装giscus
-
-Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
-
-进 Giscus App官网：https://github.com/apps/giscus
-
-点击 Install 安装
-
-选择 Only select repositories，再指定一个你想开启讨论的仓库
-
-注意
-
-仓库必须是公开的，私有的不行
-
-想单独放评论，新建一个也可
-
-查看
-
-完成后可以在个人头像-设置-应用 Applications 中看到
-开启讨论
-
-因为giscus会把评论数据都放到讨论 discussions 中
-
-我们进入要开启讨论的仓库，点设置 - 勾选讨论 Settings - discussions
-
-生成数据
-
-进入官网：https://giscus.app/zh-CN
-
-输入自己的仓库链接，满足条件会提示可用
-
-下拉到 Discussion 分类推荐选 General ，懒加载评论也可以勾选下
-
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-
-下方就自动生成了你的关键数据
-
-其中 data-repo 、 data-repo-id 、 data-category 和 data-category-id 这4个是我们的关键数据
-
-<script src="https://giscus.app/client.js"
-        data-repo="github repository"
-        data-repo-id="R_******"
-        data-category="General"
-        data-category-id="DIC_******"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-安装使用
-
-有能力的可以用官方给的js数据封装
-
-我这里用 @T-miracle/vitepress-plugin-comment-with-giscus 的插件
-pnpm
-yarn
-npm
-bun
-
-pnpm add -D vitepress-plugin-comment-with-giscus
-
-1
-
-在 .vitepress/theme/index.ts 中填入下面代码
-
-并将我们之前获取的4个关键数据填入，其他保持默认保存
-
-// .vitepress/theme/index.ts
-import DefaultTheme from 'vitepress/theme';
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
-
-export default {
-  extends: DefaultTheme,
-
-  setup() {
-    // Get frontmatter and route
-    const { frontmatter } = useData();
-    const route = useRoute();
-        
-    // giscus配置
-    giscusTalk({
-      repo: 'your github repository', //仓库
-      repoId: 'your repository id', //仓库ID
-      category: 'Announcements', // 讨论分类
-      categoryId: 'your category id', //讨论分类ID
-      mapping: 'pathname',
-      inputPosition: 'bottom',
-      lang: 'zh-CN',
-      }, 
-      {
-        frontmatter, route
-      },
-      //默认值为true，表示已启用，此参数可以忽略；
-      //如果为false，则表示未启用
-      //您可以使用“comment:true”序言在页面上单独启用它
-      true
-    );
-
-}
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-
-看下底部的效果吧
-
-
-
-
-
-
-
-
-
-
-在GitHub编辑本页
-
-上次更新时间: 2025/7/17 17:30:51
-Pager
-上一页布局插槽
-下一页更新及卸载
-本站访客数 28669 人次 本站总访问量 139910 次
+更多信息请参见 [nginx 官方文档](https://nginx.org/en/docs/)、这些 GitHub Issue [#2837](https://github.com/vuejs/vitepress/discussions/2837)、[#3235](https://github.com/vuejs/vitepress/issues/3235)以及 Mehdi Merah 发表的[博客](https://blog.mehdi.cc/articles/vitepress-cleanurls-on-nginx-environment#readings)。
