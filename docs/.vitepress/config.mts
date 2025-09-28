@@ -102,16 +102,16 @@ export default defineConfig({
         text: '快速开始',
         collapsed: false,
         items: [
-          { text: '进入服务器', link: '/redstone/test.md' },
-          { text: '整合包安装', link: '/modpack-install' },
+          { text: '服务器介绍', link: '/main/introductions.md' },
+          { text: '如何进入服务器', link: '/main/access-server.md' },
         ]
       },
       {
         text: '玩法指南',
         collapsed: false,
         items: [
-          { text: '生电文档', link: '/gameplay/redstone' },
-          { text: '整合包特色', link: '/gameplay/modpack-features' },
+          { text: '生电服务器', items: [ { text: '如何使用carpet', link: '/main/intro-history.md' }, { text: '红石机器使用事项', link: '/main/intro-features.md' } ] },
+          { text: '整合包服务器', items: [ { text: '如何下载整合包', link: '/main/intro-history.md' } ] },
         ]
       },
       {
@@ -119,7 +119,6 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '服务器守则', link: '/rules/server-rules' },
-          { text: '生电服服规', link: '/rules/redstone-rules' },
           { text: 'FAQ', link: '/faq' },
         ]
       }
