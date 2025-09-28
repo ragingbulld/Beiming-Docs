@@ -26,11 +26,11 @@
 
 ### 白名单流程
 
-北冥生电服采用[外置皮肤站](skinserver.beiming.games)登录，获取白名单即获取邀请码注册[皮肤站](skinserver.beiming.games)
+北冥生电服采用[外置皮肤站]((https://skinserver.beiming.games/))登录，获取白名单即获取邀请码注册[皮肤站]((https://skinserver.beiming.games/))
 
 进入内群后按规则更名后，请@管理获取邀请码
 
-以下是注册流程（[点击进入北冥皮肤站](skinserver.beiming.games)）
+以下是注册流程（[点击进入北冥皮肤站](https://skinserver.beiming.games/)）
 
 ##### 登入网站
 
