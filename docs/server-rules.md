@@ -1,85 +1,74 @@
-# Markdown Extension Examples
+## 成员公约：
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+---
 
-## Syntax Highlighting
+1.必须遵守法律法规，严禁任何违法犯罪以及破坏社会公序良俗的行为。
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+2.严禁挑起事端，包括不限于影响其他成员游玩，蓄意破坏他人财产、公共设施、以及非法掠夺他人在游戏内所获得的物品。
 
-**Input**
+成员守则：
+::: info test
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+https://www.kdocs.cn/l/chirVTm00d00
 
-**Output**
+1.成员应当积极参与、协助服务器内公共设施的建设，共建服务器美好未来。
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
+2.成员之间请相互监督，为了保障大家共同的游戏体验和劳动成果，如有发现违规违纪行为请及时接截屏记录证据并向管理反映。
 
-## Custom Containers
+3.https://www.kdocs.cn/l/cv0Cme7ualWb有关群昵称：加入内群（牛子群）后请立即修改群昵称！！！
 
-**Input**
+格式：[红石/后勤/建筑/休闲/交流/<开学勿踢>]+称呼+Id+<小号Id>，如：[休闲] 执白 Yuan492，完成昵称修改后@管理添加白名单。
 
-```md
-::: info
-This is an info box.
-:::
+更换账号及时上报管理员修改白名单，请勿将自己账号密码泄露给他人，后果由账号所有者承担。
 
-::: tip
-This is a tip.
-:::
+小号白名单请咨询管理员，正版账号玩家可最多申请一个小号，非正版玩家视贡献度而定。
 
-::: warning
-This is a warning.
-:::
+4.https://www.kdocs.cn/l/cksTb7SJCF7i由于新假人记录数量超过阈值将会导致读取速度过慢从而引起服务器卡顿，个人用途假人只能召唤本人ID如【bot_huachan】假人，严禁未经报备召唤大量假人，其余可召唤功能性假人详见文档https://kdocs.cn/l/cfUMTHgJ57O2。
 
-::: danger
-This is a dangerous warning.
-:::
+5.使用更新抑制前需要报备，一旦发现私自建造包括但不限于粉板、cce、声音抑制、红石粉跳略、铁轨跳略、oom等装置，将会受到处罚，造成崩服者将被封禁；报备并批准后的装置在使用结束后及时拆除，不允许长时间保留可能造成崩服的装置。
 
-::: details
-This is a details block.
-:::
-```
+6.服内大小立项（机器，建筑等）都需要向管理报备，无论是小到全物品还是大到手挖刷石机，报备内容包括但不限于地点，规模，卡顿（mspt），是否在镜像测试过，是否有实装必要等。https://www.kdocs.cn/l/cr7CHNOvFZpm如要申请报备请按要求填写此表
 
-**Output**
+7.禁止未经允许制造常加载卡服机，一经发现将勒令整改，给予适当处分。
 
-::: info
-This is an info box.
-:::
+8.严禁在群里讨论或转发不良信息，违反则视情况处分。
 
-::: tip
-This is a tip.
-:::
+9.严禁在不经原作者同意的情况下复制原创机器投影（发现就可以等着被通报了）。
 
-::: warning
-This is a warning.
-:::
+10.禁止在生电服中无意义死亡！若有装备遗失自己重新获取，不得拿新人装备（发现就ban）。
 
-::: danger
-This is a dangerous warning.
-:::
+11.大型工程施工时，伪和平不得私自关闭（导致的后果由其个人承担）。
 
-::: details
-This is a details block.
-:::
+12.损坏机器必须及时报备，如全物品等重要机器请@管理来修，小型机器报备后自己修理，不会修就去看原视频。
 
-## More
+13.严禁无意义跑图，严禁使用外挂端或脚本加速行走或跑图。
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+14.为了全服最优质面包人的身心健康，如果中午12点以后看到tutu请喊他去睡觉。
+
+管理须知：
+
+1. 每位管理拥有7个免审名额，即无需审核即可添加白名单。邀请之后该管理与新成员获得绑定，如新成员严重违规则该管理的免审名额-2，免审名额归零后将失去推荐免审资格。
+2. 管理审过的玩家存在多名玩家违反服规，则暂停该管理的审核权力。
+3. 处罚时采取投票制，每人权重为一，正常情况服主花蝉执行公牛的权力，即权重为二。
+
+处罚条例：
+
+如有违反上述规则，视情节轻重可给予口头警告、全服通报、封禁三日、封禁七日或永久封禁的处罚，处罚力度也会随违反次数增加而加重，勿以恶小而为之。
+
+**封禁三日解除时需向管理表明本心，封禁7日解除时需提交300字手写检讨并获得管理原谅**
+
+受到处罚后有一次申诉机会，管理层超三分之二同意可取消处罚，触发永久封禁时额外需要得到9位服内成员同意才可取消处罚
+
+***\**Definition :\**\***
+
+卡服机：如大量一起收回的粘性活塞，大量落沙，大量堆叠矿车、水晶、及其他实体,造成大量卡顿（高mspt）也不可取
+
+赤石科技：可能会导致卡顿，有点用但是好像没啥用
+
+同步机器：已经在生电服中完成修建，同步到镜像的机器
+
+在建机器：在镜像服中修建完成，但是生电服未实装
+
+原创机器：完全原创的机器
+
+本服规最终解释权归北冥服管理层所有
