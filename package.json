@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "nprogress-v2": "^1.1.10",
+    "vitepress": "^2.0.0-alpha.12"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
