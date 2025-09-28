@@ -3,5 +3,8 @@
     text-decoration: none;
 }
 :root {
-    --vp-button-brand-bg: #ff4366;
+    --vp-button-brand-bg: #FF5959;
+}
+.VPButton.brand[data-v-2dba8ca9]:hover {
+    background-color: #EC3232;
 }

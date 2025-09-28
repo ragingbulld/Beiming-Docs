@@ -53,9 +53,8 @@ export default defineConfig({
 
     // 🔹 社交链接（示例）
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Beiming-Group' },
-      { icon: 'discord', link: 'https://discord.gg/xxxxxx' },
-      { icon: 'qq', link: 'https://qm.qq.com/xxxxxx' }
+      { icon: 'bilibili', link: 'https://qm.qq.com/q/PFHxrAUwi6' },
+      { icon: 'qq', link: 'https://qm.qq.com/q/PFHxrAUwi6' }
     ],
 
     // 🔹 页脚（可选）
