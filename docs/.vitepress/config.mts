@@ -126,6 +126,7 @@ export default defineConfig({
 
     // 🔹 社交链接（示例）
     socialLinks: [
+      { icon: 'github', link: 'https://github.com/ragingbulld/Beiming-Docs' },
       { icon: 'bilibili', link: 'https://b23.tv/6ld3Ns8' },
       { icon: 'qq', link: 'https://qm.qq.com/q/PFHxrAUwi6' }
     ],
