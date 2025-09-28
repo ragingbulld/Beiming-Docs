@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/Beiming-Docs/',
   title: "北冥·群组服",
   description: "Minecraft 服务器游玩指南",
   head: [
