@@ -86,7 +86,7 @@ export default defineConfig({
         text: '玩法指南',
         collapsed: false,
         items: [
-          { text: '生电技巧', link: '/gameplay/redstone' },
+          { text: '生电文档', link: '/gameplay/redstone' },
           { text: '整合包特色', link: '/gameplay/modpack-features' },
         ]
       },
