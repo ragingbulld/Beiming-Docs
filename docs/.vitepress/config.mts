@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 
-const base = "/beiming-docs/"; 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/beiming-docs/',
   title: "北冥·群组服",
   description: "服务器游玩指南",
   head: [
