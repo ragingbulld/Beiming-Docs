@@ -41,9 +41,9 @@ export default defineConfig({
     // 🔹 顶部导航栏
     nav: [
       { text: '主页', link: '/' },
-      { text: '快速开始', link: '/quick-start' },
-      { text: '服务器守则', link: '/server-rules' },
-      { text: '常见问题', link: '/faq' },
+      { text: '快速开始', link: '/main/access-server' },
+      { text: '服务器守则', link: '/main/server-rules' },
+      { text: '常见问题', link: '/main/faq' },
     ],
     search: {
       provider: 'algolia',
@@ -102,24 +102,24 @@ export default defineConfig({
         text: '快速开始',
         collapsed: false,
         items: [
-          { text: '服务器介绍', link: '/main/introductions.md' },
-          { text: '如何进入服务器', link: '/main/access-server.md' },
+          { text: '服务器介绍', link: '/main/introductions' },
+          { text: '如何进入服务器', link: '/main/access-server' },
         ]
       },
       {
         text: '玩法指南',
         collapsed: false,
         items: [
-          { text: '生电服务器', items: [ { text: '如何使用carpet', link: '/main/intro-history.md' }, { text: '红石机器使用事项', link: '/main/intro-features.md' } ] },
-          { text: '整合包服务器', items: [ { text: '如何下载整合包', link: '/main/intro-history.md' } ] },
+          { text: '生电服务器', items: [ { text: '如何使用carpet', link: '/redstone/intro-history' }, { text: '红石机器使用事项', link: '/main/intro-features' } ] },
+          { text: '整合包服务器', items: [ { text: '如何下载整合包', link: '/modpacks/intro-history' } ] },
         ]
       },
       {
         text: '服务器信息',
         collapsed: false,
         items: [
-          { text: '服务器守则', link: '/rules/server-rules' },
-          { text: 'FAQ', link: '/faq' },
+          { text: '服务器守则', link: '/main/server-rules' },
+          { text: 'FAQ', link: '/main/faq' },
         ]
       }
     ],

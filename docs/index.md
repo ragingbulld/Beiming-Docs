@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /quick-start
+      link: /main/access-server
     - theme: alt
       text: 服务器守则
-      link: /server-rules
+      link: /main/server-rules
 
 features:
   - title: 🖥️ 高性能硬件
