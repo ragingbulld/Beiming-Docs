@@ -6,13 +6,13 @@ export default defineConfig({
   description: "Minecraft 服务器游玩指南",
   head: [
     // 网站图标（浏览器标签页）
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "https://bu.dusays.com/2025/09/09/68bfa36e3d5d8.ico" }],
     // 移动端适配
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
   ],
 
   themeConfig: {
-    logo: '/logo512.webp',
+    logo: 'https://bu.dusays.com/2025/09/08/68becfc70f411.webp',
 
     // 🔹 顶部导航栏
     nav: [
