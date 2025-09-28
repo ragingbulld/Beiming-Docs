@@ -111,7 +111,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '生电服务器', items: [{ text: '白名单管理', link: '/redstone/SkinSeverTutorial' }, { text: '生电服服规', link: '/redstone/redstone-rules' }, { text: '切换子服', link: '/redstone/SwitchSever' } ] },
-          { text: '整合包服务器', items: [ { text: '如何下载整合包', link: '/modpacks/modpack-install' } ] },
+          { text: '整合包服务器', items: [ { text: '注册登录教程', link: '/modpacks/modpack-install' } ] },
         ]
       },
       {
