@@ -25,12 +25,13 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 8ba47039be9453c8ab0c524059adca36
-          projectName: beiming-docs
-          directory: docs/.vitepress/dist
-          branch: main
-          wranglerVersion: '3'
+      - name: Install Wrangler
+        run: npm install -g wrangler@3
+
+      - name: Deploy to Cloudflare Pages
+        run: wrangler pages deploy docs/.vitepress/dist \
+          --project-name=beiming-docs \
+          --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 8ba47039be9453c8ab0c524059adca36
