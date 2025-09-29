@@ -3,7 +3,6 @@
     "@mdit/plugin-figure": "^0.22.1",
     "canvas-confetti": "^1.9.3",
     "medium-zoom": "^1.1.0",
-    "nprogress-v2": "^1.1.10",
     "vitepress": "^2.0.0-alpha.12"
   },
   "scripts": {
@@ -12,6 +11,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "nprogress-v2": "^1.1.10",
     "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }

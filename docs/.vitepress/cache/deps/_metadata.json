@@ -1,43 +1,49 @@
 {
-  "hash": "838cdb5c",
+  "hash": "3649884f",
   "configHash": "7331130f",
-  "lockfileHash": "4153c0e4",
-  "browserHash": "d0c0f098",
+  "lockfileHash": "846df232",
+  "browserHash": "ccd9ee8b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "8e9926af",
+      "fileHash": "86af5c74",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f68503cc",
+      "fileHash": "a44066c5",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "4b5a6e2e",
+      "fileHash": "94bbf043",
       "needsInterop": false
     },
     "vitepress-plugin-comment-with-giscus": {
       "src": "../../../../node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
       "file": "vitepress-plugin-comment-with-giscus.js",
-      "fileHash": "2598e6ce",
-      "needsInterop": false
-    },
-    "canvas-confetti": {
-      "src": "../../../../node_modules/canvas-confetti/dist/confetti.module.mjs",
-      "file": "canvas-confetti.js",
-      "fileHash": "124fbf61",
+      "fileHash": "0df113ad",
       "needsInterop": false
     },
     "medium-zoom": {
       "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "597c9465",
+      "fileHash": "b5cd8794",
+      "needsInterop": false
+    },
+    "nprogress-v2/dist/index.js": {
+      "src": "../../../../node_modules/nprogress-v2/dist/index.js",
+      "file": "nprogress-v2_dist_index__js.js",
+      "fileHash": "f9c8fdb9",
+      "needsInterop": true
+    },
+    "canvas-confetti": {
+      "src": "../../../../node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "039fedb8",
       "needsInterop": false
     }
   },
@@ -45,8 +51,11 @@
     "chunk-JAPIL3UL": {
       "file": "chunk-JAPIL3UL.js"
     },
-    "giscus-aTimukGI-KUYRML7I": {
-      "file": "giscus-aTimukGI-KUYRML7I.js"
+    "giscus-aTimukGI-AW4UKNQN": {
+      "file": "giscus-aTimukGI-AW4UKNQN.js"
+    },
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
     }
   }
 }

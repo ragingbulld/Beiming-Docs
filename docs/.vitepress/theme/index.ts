@@ -4,13 +4,14 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import './style/index.css'
-import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
-import 'nprogress-v2/dist/index.css' // 进度条样式
 import Confetti from "./components/Confetti.vue"
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import { onMounted, watch, nextTick } from 'vue'
 import mediumZoom from 'medium-zoom'
+import { inBrowser } from "vitepress";
+import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
+import "nprogress-v2/dist/index.css"; // 进度条样式
 
 let homePageStyle: HTMLStyleElement | undefined
 export default {
@@ -21,7 +22,17 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-  app.component("Confetti", Confetti); //注册全局组件
+    app.component("Confetti", Confetti); 
+    if (inBrowser) {
+      NProgress.configure({ showSpinner: false });
+
+      router.onBeforeRouteChange = () => {
+        NProgress.start(); // 开始进度条
+      };
+      router.onAfterRouteChange = () => {
+        NProgress.done(); // 停止进度条
+      };
+    }
   },
   setup() {
     // Get frontmatter and route
