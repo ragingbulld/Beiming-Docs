@@ -32,6 +32,5 @@ jobs:
           accountId: 8ba47039be9453c8ab0c524059adca36
           projectName: beiming-docs
           directory: docs/.vitepress/dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
           wranglerVersion: '3'
