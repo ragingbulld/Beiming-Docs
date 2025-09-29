@@ -32,8 +32,8 @@ const baseConfig = {
     nav: [
       { text: '主页', link: '/' },
       { text: '快速开始', link: '/1-服务器总体/1.1-如何加入服务器' },
-      { text: '服务器守则', link: '/main/server-rules' },
-      { text: '常见问题', link: '/main/faq' },
+      { text: '服务器守则', link: '/1-服务器总体/1.2-服务器守则' },
+      { text: '常见问题', link: '/1-服务器总体/1.4-faq.md' },
     ],
     search: {
       provider: 'algolia',
