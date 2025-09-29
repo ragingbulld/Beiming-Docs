@@ -27,3 +27,7 @@
 :root {
   animation: rainbow 12s linear infinite;
 }
+/* 历史记录容器背景色 */
+.vp-nolebase-git-changelog-history-container {
+  background-color: rgba(142, 150, 170, 0.14) !important; /* 半透明灰蓝色 */
+}
