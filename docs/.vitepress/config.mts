@@ -3,7 +3,6 @@ import { figure } from '@mdit/plugin-figure'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/',
   title: "北冥文档库",
   description: "Minecraft 服务器游玩指南",
   head: [
