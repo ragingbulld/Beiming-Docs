@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
-import { figure } from '@mdit/plugin-figure'
 
 // 先写你的基础配置
 const baseConfig = {
@@ -12,7 +11,6 @@ const baseConfig = {
   ],
   markdown: {
     lineNumbers: true,
-    config: (md) => md.use(figure)
   },
   themeConfig: {
     logo: '/logo512.webp',
