@@ -31,7 +31,7 @@ const baseConfig = {
     docFooter: { prev: '上一页', next: '下一页' }, 
     nav: [
       { text: '主页', link: '/' },
-      { text: '快速开始', link: '/服务器总体/如何加入服务器' },
+      { text: '快速开始', link: '/1-服务器总体/1.1-如何加入服务器' },
       { text: '服务器守则', link: '/main/server-rules' },
       { text: '常见问题', link: '/main/faq' },
     ],
@@ -75,12 +75,10 @@ const baseConfig = {
 // 侧边栏配置，用 withSidebar 包裹
 export default defineConfig(
   withSidebar(baseConfig, {
-    // 可在这里写 vitepress-sidebar 的选项
-    // 例如：
     collapsed: true,
     documentRootPath: '/docs',
-    hyphenToSpace: true,
     sortMenusByFrontmatterOrder: true,
-    // 更多选项可以参照官方文档
+    removePrefixAfterOrdering: true,
+    prefixSeparator: '-',
   })
 )
