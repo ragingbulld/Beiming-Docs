@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /1-服务器总体/1.1-如何加入服务器
+      link: /1-基本信息/1.1-如何加入服务器
     - theme: alt
       text: 服务器守则
-      link: /1-服务器总体/1.2-服务器守则
+      link: /1-基本信息/1.2-服务器守则
 
 features:
   - icon: 🖥️
