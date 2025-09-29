@@ -110,7 +110,7 @@ export default defineConfig({
         text: '玩法指南',
         collapsed: false,
         items: [
-          { text: '生电服务器', items: [{ text: '白名单管理', link: '/redstone/SkinSeverTutorial' }, { text: '生电服服规', link: '/redstone/redstone-rules' }, { text: '切换子服', link: '/redstone/SwitchSever' } ] },
+          { text: '生电服务器', items: [{ text: '生电服进服流程', link: '/redstone/SkinSeverTutorial' }, { text: '生电服服规', link: '/redstone/redstone-rules' }, { text: '切换子服', link: '/redstone/SwitchSever' } ] },
           { text: '整合包服务器', items: [ { text: '注册登录教程', link: '/modpacks/modpack-install' } ] },
         ]
       },
