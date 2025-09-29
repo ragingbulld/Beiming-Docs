@@ -27,7 +27,7 @@ const baseConfig = {
     lineNumbers: true,
   },
   themeConfig: {
-    logo: '/logo512.webp',
+    logo: 'https://bu.dusays.com/2025/09/08/68becfc70f411.webp',
     outline: { 
       level: [2,4],
       label: '当前页大纲'
