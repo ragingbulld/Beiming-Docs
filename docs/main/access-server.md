@@ -5,10 +5,13 @@
 我们拥有专用的**北冥云盘**用于给各位玩家下载客户端
 
 使用浏览器打开**北冥云盘链接**：[`https://cloud.beiming.games/s/QktY`](https://cloud.beiming.games/s/QktY)
-![image-20250928173559009](https://bu.dusays.com/2025/09/28/68d90181dd6e0.webp)
+
+![云盘主界面](https://bu.dusays.com/2025/09/28/68d90181dd6e0.webp)
 
 找到并进入自己游玩服务器**所对应的文件夹**
-![image-20250928173730114](https://bu.dusays.com/2025/09/28/68d901daa0a9a.webp)
+
+![乌托邦整合包](https://bu.dusays.com/2025/09/28/68d901daa0a9a.webp)
+
 **双击**即可开始下载！
 如果觉得下载太慢，请参考：
 <br>
@@ -34,6 +37,7 @@ Minecraft 服务器需要稳定、高性能的 JVM，选择合适的 Java 发行
   ::: warning 注意：
    - MC 服务器对 Java 版本敏感，**建议使用 LTS 版本**（如 17、21）。  
    - 尽量避免使用非官方修改版或实验版 JVM，否则可能遇到兼容性问题。
+
   :::
 
   ::: tip 提示
@@ -43,13 +47,17 @@ Minecraft 服务器需要稳定、高性能的 JVM，选择合适的 Java 发行
   :::
   进入**Azul官网**：[`https://www.azul.com/downloads/#zulu`](https://www.azul.com/downloads/#zulu)
 
-![image-20250928174657475](https://bu.dusays.com/2025/09/28/68d9041484ff4.webp)``
+![zulu官网](https://bu.dusays.com/2025/09/28/68d9041484ff4.webp)
+
 
 选择**java21**版本
-![image-20250928174728924](https://bu.dusays.com/2025/09/28/68d9043186545.webp)
+
+![切换java21](https://bu.dusays.com/2025/09/28/68d9043186545.webp)
 
 找到**Windows**版本的**最新版本**，下载**msi**格式
-![image-20250928174828377](https://bu.dusays.com/2025/09/28/68d9046cd1742.webp)
+
+![下载msi格式安装包](https://bu.dusays.com/2025/09/28/68d9046cd1742.webp)
+
 
 下载好之后直接按照**默认配置**安装即可！
 

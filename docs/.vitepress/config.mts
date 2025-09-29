@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { figure } from '@mdit/plugin-figure'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,6 +13,9 @@ export default defineConfig({
   ],
   markdown: {
     lineNumbers: true, // 代码块显示行号
+    config: (md) => {
+      md.use(figure)
+    } 
   },
   themeConfig: {
     logo: '/logo512.webp',

@@ -9,6 +9,8 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 import Confetti from "./components/Confetti.vue"
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
+import { onMounted, watch, nextTick } from 'vue'
+import mediumZoom from 'medium-zoom'
 
 let homePageStyle: HTMLStyleElement | undefined
 export default {
@@ -25,7 +27,17 @@ export default {
     // Get frontmatter and route
     const { frontmatter } = useData();
     const route = useRoute();
-        
+    const initZoom = () => {
+      // 为所有图片增加缩放功能
+      mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+    }
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
     // giscus配置
     giscusTalk({
       repo: 'ragingbulld/Beiming-Docs', //仓库
