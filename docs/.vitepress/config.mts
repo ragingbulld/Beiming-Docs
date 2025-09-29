@@ -1,51 +1,37 @@
 import { defineConfig } from 'vitepress'
+import { withSidebar } from 'vitepress-sidebar'
 import { figure } from '@mdit/plugin-figure'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+// 先写你的基础配置
+const baseConfig = {
   title: "北冥文档库",
   description: "Minecraft 服务器游玩指南",
   head: [
-    // 网站图标（浏览器标签页）
     ["link", { rel: "icon", href: "https://bu.dusays.com/2025/09/09/68bfa36e3d5d8.ico" }],
-    // 移动端适配
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
   ],
   markdown: {
-    lineNumbers: true, // 代码块显示行号
-    config: (md) => {
-      md.use(figure)
-    } 
+    lineNumbers: true,
+    config: (md) => md.use(figure)
   },
   themeConfig: {
     logo: '/logo512.webp',
     outline: { 
-      level: [2,4], // 显示2-4级标题
-      // level: 'deep', // 显示2-6级标题
-      label: '当前页大纲' // 文字显示
+      level: [2,4],
+      label: '当前页大纲'
     },
-    //编辑本页
     editLink: { 
-      pattern: 'https://github.com/ragingbulld/Beiming-Docs/edit/main/docs/:path', // 改成自己的仓库
+      pattern: 'https://github.com/ragingbulld/Beiming-Docs/edit/main/docs/:path',
       text: '在GitHub编辑本页'
     },
-    //上次更新时间
     lastUpdated: {
       text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'short', // 可选值full、long、medium、short
-        timeStyle: 'medium' // 可选值full、long、medium、short
-      },
+      formatOptions: { dateStyle: 'short', timeStyle: 'medium' },
     },
-    //自定义上下页名
-    docFooter: { 
-      prev: '上一页', 
-      next: '下一页', 
-    }, 
-    // 🔹 顶部导航栏
+    docFooter: { prev: '上一页', next: '下一页' }, 
     nav: [
       { text: '主页', link: '/' },
-      { text: '快速开始', link: '/main/access-server' },
+      { text: '快速开始', link: '/服务器总体/如何加入服务器' },
       { text: '服务器守则', link: '/main/server-rules' },
       { text: '常见问题', link: '/main/faq' },
     ],
@@ -59,10 +45,7 @@ export default defineConfig({
           root: {
             placeholder: '搜索文档',
             translations: {
-              button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档'
-              },
+              button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
               modal: {
                 searchBox: {
                   resetButtonTitle: '清除查询条件',
@@ -70,74 +53,34 @@ export default defineConfig({
                   cancelButtonText: '取消',
                   cancelButtonAriaLabel: '取消'
                 },
-                startScreen: {
-                  recentSearchesTitle: '搜索历史',
-                  noRecentSearchesText: '没有搜索历史',
-                  saveRecentSearchButtonTitle: '保存至搜索历史',
-                  removeRecentSearchButtonTitle: '从搜索历史中移除',
-                  favoriteSearchesTitle: '收藏',
-                  removeFavoriteSearchButtonTitle: '从收藏中移除'
-                },
-                errorScreen: {
-                  titleText: '无法获取结果',
-                  helpText: '你可能需要检查你的网络连接'
-                },
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
-                  closeText: '关闭',
-                  searchByText: '搜索提供者'
-                },
-                noResultsScreen: {
-                  noResultsText: '无法找到相关结果',
-                  suggestedQueryText: '你可以尝试查询',
-                  reportMissingResultsText: '你认为该查询应该有结果？',
-                  reportMissingResultsLinkText: '点击反馈'
-                },
+                startScreen: { recentSearchesTitle: '搜索历史', noRecentSearchesText: '没有搜索历史', saveRecentSearchButtonTitle: '保存至搜索历史', removeRecentSearchButtonTitle: '从搜索历史中移除', favoriteSearchesTitle: '收藏', removeFavoriteSearchButtonTitle: '从收藏中移除' },
+                errorScreen: { titleText: '无法获取结果', helpText: '你可能需要检查你的网络连接' },
+                footer: { selectText: '选择', navigateText: '切换', closeText: '关闭', searchByText: '搜索提供者' },
+                noResultsScreen: { noResultsText: '无法找到相关结果', suggestedQueryText: '你可以尝试查询', reportMissingResultsText: '你认为该查询应该有结果？', reportMissingResultsLinkText: '点击反馈' }
               },
             },
           },
         },
       },
     },
-    // 🔹 侧边栏
-    sidebar: [
-      {
-        text: '快速开始',
-        collapsed: false,
-        items: [
-          { text: '服务器介绍', link: '/main/introductions' },
-          { text: '如何进入服务器', link: '/main/access-server' },
-        ]
-      },
-      {
-        text: '玩法指南',
-        collapsed: false,
-        items: [
-          { text: '生电服务器', items: [{ text: '生电服进服流程', link: '/redstone/SkinSeverTutorial' }, { text: '生电服服规', link: '/redstone/redstone-rules' }, { text: '切换子服', link: '/redstone/SwitchSever' } ] },
-          { text: '整合包服务器', items: [ { text: '注册登录教程', link: '/modpacks/modpack-install' } ] },
-        ]
-      },
-      {
-        text: '服务器信息',
-        collapsed: false,
-        items: [
-          { text: '服务器守则', link: '/main/server-rules' },
-          { text: 'FAQ', link: '/main/faq' },
-        ]
-      }
-    ],
-
-    // 🔹 社交链接（示例）
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ragingbulld/Beiming-Docs' },
       { icon: 'bilibili', link: 'https://b23.tv/6ld3Ns8' },
       { icon: 'qq', link: 'https://qm.qq.com/q/PFHxrAUwi6' }
     ],
-
-    // 🔹 页脚（可选）
-    footer: {
-      copyright: '© 2025 北冥·群组服'
-    }
+    footer: { copyright: '© 2025 北冥·群组服' }
   }
-})
+}
+
+// 侧边栏配置，用 withSidebar 包裹
+export default defineConfig(
+  withSidebar(baseConfig, {
+    // 可在这里写 vitepress-sidebar 的选项
+    // 例如：
+    collapsed: true,
+    documentRootPath: '/docs',
+    hyphenToSpace: true,
+    sortMenusByFrontmatterOrder: true,
+    // 更多选项可以参照官方文档
+  })
+)

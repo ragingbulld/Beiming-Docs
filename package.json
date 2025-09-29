@@ -3,7 +3,8 @@
     "@mdit/plugin-figure": "^0.22.1",
     "canvas-confetti": "^1.9.3",
     "medium-zoom": "^1.1.0",
-    "vitepress": "^2.0.0-alpha.12"
+    "vitepress": "^2.0.0-alpha.12",
+    "vitepress-sidebar": "^1.33.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
