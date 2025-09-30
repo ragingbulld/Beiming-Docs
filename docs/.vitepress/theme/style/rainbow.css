@@ -425,8 +425,18 @@
 
 .VPDoc h1 {
   background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
-  background-clip: text;
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.vp-doc h2 {
+	border-top: 1px solid transparent;
+}
+/* 添加悬停效果 */
+.VPDoc h2:hover,
+.VPDoc h3:hover,
+.VPDoc h4:hover,
+.VPDoc h5:hover {
+    transform: translateX(2px);
+    transition: all 0.2s ease;
+}
+
