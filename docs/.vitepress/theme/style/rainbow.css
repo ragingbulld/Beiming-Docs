@@ -427,7 +427,6 @@
   background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
 }
 .vp-doc h2 {
 	border-top: 1px solid transparent;
