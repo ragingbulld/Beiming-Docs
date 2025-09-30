@@ -430,12 +430,7 @@
   text-align: center;
 }
 .vp-doc h2 {
-	margin: 15px 0 16px;
 	border-top: 1px solid transparent;
-	padding-top: 40px;
-	letter-spacing: -0.02em;
-	line-height: 32px;
-	font-size: 24px;
 }
 /* 添加悬停效果 */
 .VPDoc h2:hover,
