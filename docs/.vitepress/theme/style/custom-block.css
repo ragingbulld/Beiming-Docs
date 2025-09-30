@@ -70,3 +70,11 @@
     left: -5px;
     top: -1px;
 }
+/* .vitepress/theme/style/blockquote.css */
+.vp-doc blockquote {
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: rgba(222, 192, 252, 0.14);
+  border: 1px solid #c592f9; /* 四周边框 */
+}
