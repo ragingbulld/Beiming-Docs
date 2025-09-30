@@ -14,8 +14,8 @@ hero:
       text: 如何游玩
       link: /1-基本信息/1.1-如何加入服务器
     - theme: alt
-      text: 服务器守则
-      link: /1-基本信息/1.2-服务器守则
+      text: 关于北冥
+      link: /4-关于北冥/4.1-关于我们
 
 features:
   - icon: 🖥️
