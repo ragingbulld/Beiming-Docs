@@ -424,16 +424,15 @@
 }
 
 .VPDoc h1 {
-    background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
-    background-clip: text;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(120deg, var(--rainbow-prev) 30%, var(--rainbow-next));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 .vp-doc h2 {
-    margin: 16px 0 16px;
-	border-top: transparent;
-	padding-top: 24px;
+	margin: 15px 0 16px;
+	border-top: 1px solid transparent;
+	padding-top: 40px;
 	letter-spacing: -0.02em;
 	line-height: 32px;
 	font-size: 24px;
