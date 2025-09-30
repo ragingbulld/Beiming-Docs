@@ -80,3 +80,9 @@
   color: #4a2c82; /* 深紫文字 */
   font-style: italic;
 }
+/* 暗黑模式 */
+.dark .vp-doc blockquote {
+  background-color: rgba(155, 81, 224, 0.2); 
+  border: 1px solid rgba(155, 81, 224, 0.6);
+  color: #dcbfff; /* 浅紫/白色文字，更清晰 */
+}
