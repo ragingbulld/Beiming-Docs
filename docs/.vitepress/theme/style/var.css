@@ -1,7 +1,81 @@
-/* var.css */
+/* ---------- 浅色模式 ---------- */
+/* 普通链接 */
 .vp-doc a {
-    text-decoration: none;
+  text-decoration: none;
+  color: #ff6f61; /* 主体粉橙 */
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
+
+.vp-doc a:hover {
+  color: #ff9980; /* 悬停时亮粉橙 */
+}
+
+/* 链接中的 code */
+.vp-doc a > code {
+  text-decoration: none;
+  color: #e64a19; /* 鲜艳橙红文字 */
+  background-color: transparent; /* 透明背景 */
+  border: 1px solid #ff8a65; /* 边框粉橙 */
+  border-radius: 4px;
+  padding: 0.15em 0.3em;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.vp-doc a:hover > code {
+  color: #fff;
+  background-color: #ff8a65; /* 悬停时显示背景色 */
+  border-color: #ff8a65;
+}
+
+/* 普通 code（非链接中的） */
+.vp-doc :not(pre) > code {
+  border-radius: 4px;
+  padding: 3px 6px;
+  background-color: transparent; /* 透明背景 */
+  color: #d84315; /* 深橙红字 */
+  border: 1px solid #ff8a65; /* 添加边框 */
+  transition: color 0.25s, background-color 0.25s, border-color 0.25s;
+}
+
+.vp-doc :not(pre) > code:hover {
+  background-color: #ff8a65; /* 悬停时显示背景色 */
+  color: #fff;
+  border-color: #ff8a65;
+}
+
+/* ---------- 暗黑模式 ---------- */
+.dark .vp-doc a {
+  color: #ff8a65; /* 明亮粉橙 */
+}
+
+.dark .vp-doc a:hover {
+  color: #ffb199; /* 悬停亮粉橙 */
+}
+
+.dark .vp-doc a > code {
+  color: #ffab91; /* 橙红文字 */
+  background-color: transparent; /* 透明背景 */
+  border: 1px solid #ff7043; /* 边框橙色 */
+}
+
+.dark .vp-doc a:hover > code {
+  color: #fff;
+  background-color: #ff7043; /* 悬停时显示背景色 */
+  border-color: #ff7043;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background-color: transparent; /* 透明背景 */
+  color: #ff8a65; /* 浅亮粉橙文字 */
+  border: 1px solid #ff7043; /* 添加边框 */
+}
+
+.dark .vp-doc :not(pre) > code:hover {
+  background-color: #ff7043; /* 悬停时显示背景色 */
+  color: #fff;
+  border-color: #ff7043;
+}
+
 /* .vitepress/theme/style/var.css */
 
 /* VPFeatures 页卡悬浮效果 */
