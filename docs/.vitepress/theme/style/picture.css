@@ -1,10 +1,10 @@
 .medium-zoom-overlay {
   background-color: var(--vp-c-bg) !important;
-  z-index: 100;
+  z-index: 100 !important;
 }
 
 .medium-zoom-overlay ~ img {
-  z-index: 101;
+  z-index: 101 !important;
 }
 
 .medium-zoom--opened .medium-zoom-overlay {
