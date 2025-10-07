@@ -45,7 +45,7 @@ const baseConfig = {
       { text: '主页', link: '/' },
       { text: '快速开始', link: '/1-基本信息/1.1-如何加入服务器' },
       { text: '服务器守则', link: '/1-基本信息/1.2-服务器守则' },
-      { text: '常见问题', link: '/1-基本信息/1.4-faq.md' },
+      { text: '常见问题', link: '/1-基本信息/1.5-faq' },
     ],
     search: {
       provider: 'algolia',
