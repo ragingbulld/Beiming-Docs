@@ -10,10 +10,10 @@
   color: var(--vp-c-green-1); 
 }
 .dark .custom-block.tip a {
-	color: var(--vp-c-green-3) !important;
+	color: var(--vp-c-green-1) !important;
 }
 .dark .custom-block.tip a:hover {
-  color: var(--vp-c-green-1) !important; 
+  color: var(--vp-c-green-3) !important; 
 }
 .custom-block.tip code {
 	color: var(--vp-c-green-1);
@@ -40,7 +40,7 @@
   border-color: var(--vp-c-green-2);
 }
 .custom-block.warning a {
-	color: var(--vp-c-yellow-1);
+	color: var(--vp-c-yellow-3);
 }
 .custom-block.warning a:hover {
   color: var(--vp-c-yellow-1); 
@@ -49,16 +49,12 @@
 	color: var(--vp-c-yellow-1) !important;
 }
 .dark.custom-block.warning a:hover {
-  color: var(--vp-c-yellow-1) !important; 
-}
-/* 提示框 */
-.custom-block.warning {
-  border-color: var(--vp-c-yellow-2);
+  color: var(--vp-c-yellow-3) !important; 
 }
 .custom-block.warning code {
-	color: var(--vp-c-yellow-1);
+	color: var(--vp-c-yellow-3);
   background-color: transparent;
-	border-color: var(--vp-c-yellow-3);
+	border-color: var(--vp-c-yellow-1);
 }
 .custom-block.warning code:hover {
   color: #fff;
@@ -87,10 +83,10 @@
   color: var(--vp-c-red-1); 
 }
 .dark .custom-block.danger a {
-	color: var(--vp-c-red-3) !important;
+	color: var(--vp-c-red-1) !important;
 }
 .dark .custom-block.danger a:hover {
-  color: var(--vp-c-red-1) !important;
+  color: var(--vp-c-red-3) !important;
 }
 .custom-block.danger code {
 	color: var(--vp-c-red-1);
