@@ -8,6 +8,9 @@
 .custom-block.tip {
   border-color: var(--vp-c-green-2);
 }
+.custom-block.tip code {
+	color: #d84315;
+}
 /* 警告框 */
 .custom-block.warning {
   /* border-color: #d97706; */
