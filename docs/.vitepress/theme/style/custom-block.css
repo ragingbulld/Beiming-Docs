@@ -4,24 +4,114 @@
   --vp-custom-block-tip-code-bg: transparent;
 }
 .custom-block.tip a {
-	color: #ff6f61;
+	color: var(--vp-c-green-3);
 }
 .custom-block.tip a:hover {
-  color: #ff9980; /* 悬停时亮粉橙 */
+  color: var(--vp-c-green-1); 
+}
+.dark .custom-block.tip a {
+	color: var(--vp-c-green-3) !important;
+}
+.dark .custom-block.tip a:hover {
+  color: var(--vp-c-green-1) !important; 
+}
+.custom-block.tip code {
+	color: var(--vp-c-green-1);
+  background-color: transparent;
+	border-color: var(--vp-c-green-3);
+}
+.custom-block.tip code:hover {
+  color: #fff;
+  background-color: var(--vp-c-green-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-green-3);
+}
+.dark .custom-block.tip code {
+	color: var(--vp-c-green-1);
+  background-color: transparent;
+	border-color: var(--vp-c-green-3);
+}
+.dark .custom-block.tip code:hover {
+  color: #fff;
+  background-color: var(--vp-c-green-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-green-3);
 }
 /* 提示框 */
 .custom-block.tip {
   border-color: var(--vp-c-green-2);
 }
-.custom-block.tip code {
-	color: #d84315;
+.custom-block.warning a {
+	color: var(--vp-c-yellow-1);
+}
+.custom-block.warning a:hover {
+  color: var(--vp-c-yellow-1); 
+}
+.dark .custom-block.warning a {
+	color: var(--vp-c-yellow-1) !important;
+}
+.dark.custom-block.warning a:hover {
+  color: var(--vp-c-yellow-1) !important; 
+}
+/* 提示框 */
+.custom-block.warning {
+  border-color: var(--vp-c-yellow-2);
+}
+.custom-block.warning code {
+	color: var(--vp-c-yellow-1);
+  background-color: transparent;
+	border-color: var(--vp-c-yellow-3);
+}
+.custom-block.warning code:hover {
+  color: #fff;
+  background-color: var(--vp-c-yellow-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-yellow-3);
+}
+.dark .custom-block.warning code {
+	color: var(--vp-c-yellow-1);
+  background-color: transparent;
+	border-color: var(--vp-c-yellow-3);
+}
+.dark .custom-block.warning code:hover {
+  color: #fff;
+  background-color: var(--vp-c-yellow-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-yellow-3);
 }
 /* 警告框 */
 .custom-block.warning {
   /* border-color: #d97706; */
   border-color: var(--vp-c-yellow-2);
 }
-
+.custom-block.danger a {
+	color: var(--vp-c-red-3);
+}
+.custom-block.danger a:hover {
+  color: var(--vp-c-red-1); 
+}
+.dark .custom-block.danger a {
+	color: var(--vp-c-red-3) !important;
+}
+.dark .custom-block.danger a:hover {
+  color: var(--vp-c-red-1) !important;
+}
+.custom-block.danger code {
+	color: var(--vp-c-red-1);
+  background-color: transparent;
+	border-color: var(--vp-c-red-3);
+}
+.custom-block.danger code:hover {
+  color: #fff;
+  background-color: var(--vp-c-red-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-red-3);
+}
+.dark .custom-block.danger code {
+	color: var(--vp-c-red-1);
+  background-color: transparent;
+	border-color: var(--vp-c-red-3);
+}
+.dark .custom-block.danger code:hover {
+  color: #fff;
+  background-color: var(--vp-c-red-3); /* 悬停时显示背景色 */
+  border-color: var(--vp-c-red-3);
+}
 /* 危险框 */
 .custom-block.danger {
   /* border-color: #f43f5e; */
