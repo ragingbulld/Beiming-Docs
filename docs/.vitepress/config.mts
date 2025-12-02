@@ -5,12 +5,10 @@ import {
   GitChangelogMarkdownSection, 
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
-// 先写你的基础配置
 const baseConfig = {
   vite: { 
     plugins: [ 
       GitChangelog({ 
-        // 填写在此处填写您的仓库链接
         repoURL: () => 'https://github.com/ragingbulld/Beiming-Docs', 
       }), 
       GitChangelogMarkdownSection(), 
@@ -34,7 +32,7 @@ const baseConfig = {
     },
     editLink: { 
       pattern: 'https://github.com/ragingbulld/Beiming-Docs/edit/main/docs/:path',
-      text: '在GitHub编辑本页'
+      text: '内容有问题？帮我们完善文档'
     },
     lastUpdated: {
       text: '最后更新于',
@@ -84,7 +82,6 @@ const baseConfig = {
   }
 }
 
-// 侧边栏配置，用 withSidebar 包裹
 export default defineConfig(
   withSidebar(baseConfig, {
     collapsed: true,
