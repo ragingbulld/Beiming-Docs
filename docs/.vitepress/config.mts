@@ -18,7 +18,7 @@ const baseConfig = {
   title: "北冥文档库",
   description: "Minecraft 服务器游玩指南",
   head: [
-    ["link", { rel: "icon", href: "https://bu.dusays.com/2025/09/09/68bfa36e3d5d8.ico" }],
+    ["link", { rel: "icon", href: "/favicon.ico" }],
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
   ],
   markdown: {
