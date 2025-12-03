@@ -13,11 +13,14 @@
 /* 链接中的 code */
 .vp-doc a > code {
   text-decoration: none;
-  color: #e64a19; /* 鲜艳橙红文字 */
+  color: #ff7c54; /* 鲜艳橙红文字 */
   background-color: transparent; /* 透明背景 */
-  border: 1.5px solid #ff8a65; /* 边框粉橙 */
-  border-radius: 4px;
+  border: 2.5px solid #ff8a65; /* 边框粉橙 */
+  border-radius: 10px;
   padding: 0.15em 0.3em;
+  font-family: PingFang Rounded;
+  font-weight: bold;
+  font-size: small;
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -29,18 +32,29 @@
 
 /* 普通 code（非链接中的） */
 .vp-doc :not(pre) > code {
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 2px 4px;
   background-color: transparent; /* 透明背景 */
-  color: #d84315; /* 深橙红字 */
-  border: 1.5px solid #ff8a65; /* 添加边框 */
+  color: #ff7c54; /* 深橙红字 */
+  border: 2.5px solid #ff8a65; /* 添加边框 */
+  font-family: PingFang Rounded;
+  font-weight: bold;
+  font-size: small;
   transition: color 0.25s, background-color 0.25s, border-color 0.25s;
+}
+
+.dark .vp-doc :not(pre) > code {
+  border: 2.5px solid #ff8a65 !important; /* 添加边框 */
 }
 
 .vp-doc :not(pre) > code:hover {
   background-color: #ff8a65; /* 悬停时显示背景色 */
   color: #fff;
   border-color: #ff8a65;
+}
+
+.dark .vp-doc :not(pre) > code:hover {
+  background-color: #ff8a65 !important; /* 悬停时显示背景色 */
 }
 
 /* ---------- 暗黑模式 ---------- */
