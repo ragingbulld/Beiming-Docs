@@ -28,12 +28,12 @@
 .dark .custom-block.tip code {
 	color: var(--vp-c-green-1);
   background-color: transparent;
-	border-color: var(--vp-c-green-3);
+	border-color: var(--vp-c-green-3) !important;
 }
 .dark .custom-block.tip code:hover {
   color: #fff;
-  background-color: var(--vp-c-green-3); /* 悬停时显示背景色 */
-  border-color: var(--vp-c-green-3);
+  background-color: var(--vp-c-green-3) !important; /* 悬停时显示背景色 */
+  border-color: var(--vp-c-green-3) !important;
 }
 /* 提示框 */
 .custom-block.tip {
@@ -58,18 +58,18 @@
 }
 .custom-block.warning code:hover {
   color: #fff;
-  background-color: var(--vp-c-yellow-3); /* 悬停时显示背景色 */
-  border-color: var(--vp-c-yellow-3);
+  background-color: var(--vp-c-yellow-3) !important; /* 悬停时显示背景色 */
+  border-color: var(--vp-c-yellow-3) !important;
 }
 .dark .custom-block.warning code {
 	color: var(--vp-c-yellow-1);
   background-color: transparent;
-	border-color: var(--vp-c-yellow-3);
+	border-color: var(--vp-c-yellow-3) !important;
 }
 .dark .custom-block.warning code:hover {
   color: #fff;
-  background-color: var(--vp-c-yellow-3); /* 悬停时显示背景色 */
-  border-color: var(--vp-c-yellow-3);
+  background-color: var(--vp-c-yellow-3) !important; /* 悬停时显示背景色 */
+  border-color: var(--vp-c-yellow-3) !important;
 }
 /* 警告框 */
 .custom-block.warning {
@@ -101,12 +101,12 @@
 .dark .custom-block.danger code {
 	color: var(--vp-c-red-1);
   background-color: transparent;
-	border-color: var(--vp-c-red-3);
+	border-color: var(--vp-c-red-3) !important;
 }
 .dark .custom-block.danger code:hover {
   color: #fff;
-  background-color: var(--vp-c-red-3); /* 悬停时显示背景色 */
-  border-color: var(--vp-c-red-3);
+  background-color: var(--vp-c-red-3) !important; /* 悬停时显示背景色 */
+  border-color: var(--vp-c-red-3) !important;
 }
 /* 危险框 */
 .custom-block.danger {
