@@ -20,7 +20,7 @@
   padding: 0.15em 0.3em;
   font-family: PingFang Rounded;
   font-weight: bold;
-  font-size: small;
+  font-size: 12px;
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -39,7 +39,7 @@
   border: 2.5px solid #ff8a65; /* 添加边框 */
   font-family: PingFang Rounded;
   font-weight: bold;
-  font-size: small;
+  font-size: 12px;
   transition: color 0.25s, background-color 0.25s, border-color 0.25s;
 }
 
