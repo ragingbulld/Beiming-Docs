@@ -13,7 +13,7 @@
 /* 链接中的 code */
 .vp-doc a > code {
   text-decoration: none;
-  color: #ff7c54; /* 鲜艳橙红文字 */
+  color: #ff7247; /* 鲜艳橙红文字 */
   background-color: transparent; /* 透明背景 */
   border: 2.5px solid #ff8a65; /* 边框粉橙 */
   border-radius: 10px;
@@ -35,7 +35,7 @@
   border-radius: 10px;
   padding: 2px 4px;
   background-color: transparent; /* 透明背景 */
-  color: #ff7c54; /* 深橙红字 */
+  color: #ff7247; /* 深橙红字 */
   border: 2.5px solid #ff8a65; /* 添加边框 */
   font-family: PingFang Rounded;
   font-weight: bold;
