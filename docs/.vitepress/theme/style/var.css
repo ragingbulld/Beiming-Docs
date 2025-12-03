@@ -15,7 +15,7 @@
   text-decoration: none;
   color: #e64a19; /* 鲜艳橙红文字 */
   background-color: transparent; /* 透明背景 */
-  border: 1px solid #ff8a65; /* 边框粉橙 */
+  border: 1.5px solid #ff8a65; /* 边框粉橙 */
   border-radius: 4px;
   padding: 0.15em 0.3em;
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
@@ -30,10 +30,10 @@
 /* 普通 code（非链接中的） */
 .vp-doc :not(pre) > code {
   border-radius: 4px;
-  padding: 3px 6px;
+  padding: 2px 4px;
   background-color: transparent; /* 透明背景 */
   color: #d84315; /* 深橙红字 */
-  border: 1px solid #ff8a65; /* 添加边框 */
+  border: 1.5px solid #ff8a65; /* 添加边框 */
   transition: color 0.25s, background-color 0.25s, border-color 0.25s;
 }
 
