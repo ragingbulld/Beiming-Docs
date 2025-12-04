@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "canvas-confetti": "^1.9.3",
+    "canvas-confetti": "^1.9.4",
     "medium-zoom": "^1.1.0",
     "vitepress": "^2.0.0-alpha.12",
-    "vitepress-sidebar": "^1.33.0"
+    "vitepress-sidebar": "^1.33.1"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
