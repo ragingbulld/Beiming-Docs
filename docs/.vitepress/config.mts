@@ -1,19 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
-import { 
-  GitChangelog, 
-  GitChangelogMarkdownSection, 
-} from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 const baseConfig = {
-  vite: { 
-    plugins: [ 
-      GitChangelog({ 
-        repoURL: () => 'https://github.com/ragingbulld/Beiming-Docs', 
-      }), 
-      GitChangelogMarkdownSection(), 
-    ],
-  }, 
   lang: "zh-CN",
   title: "北冥文档库",
   description: "Minecraft 服务器游玩指南",

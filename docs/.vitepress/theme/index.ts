@@ -12,10 +12,6 @@ import mediumZoom from 'medium-zoom'
 import { inBrowser } from "vitepress";
 import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
 import "nprogress-v2/dist/index.css"; // 进度条样式
-import { 
-  NolebaseGitChangelogPlugin 
-} from '@nolebase/vitepress-plugin-git-changelog/client'
-import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 
 let homePageStyle: HTMLStyleElement | undefined
 export default {
@@ -27,7 +23,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component("Confetti", Confetti); 
-    app.use(NolebaseGitChangelogPlugin);
     if (inBrowser) {
       NProgress.configure({ showSpinner: false });
 
