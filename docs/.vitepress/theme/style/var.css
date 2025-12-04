@@ -15,7 +15,7 @@
   text-decoration: none;
   color: #ff7247; /* 鲜艳橙红文字 */
   background-color: transparent; /* 透明背景 */
-  border: 2.5px solid #ff8a65; /* 边框粉橙 */
+  border: 2px solid #ff8a65; /* 边框粉橙 */
   border-radius: 10px;
   padding: 0.15em 0.3em;
   font-family: PingFang Rounded;
@@ -36,7 +36,7 @@
   padding: 2px 4px;
   background-color: transparent; /* 透明背景 */
   color: #ff7247; /* 深橙红字 */
-  border: 2.5px solid #ff8a65; /* 添加边框 */
+  border: 2px solid #ff8a65; /* 添加边框 */
   font-family: PingFang Rounded;
   font-weight: bold;
   font-size: 12px;
@@ -44,7 +44,7 @@
 }
 
 .dark .vp-doc :not(pre) > code {
-  border: 2.5px solid #ff8a65 !important; /* 添加边框 */
+  border: 2px solid #ff8a65 !important; /* 添加边框 */
 }
 
 .vp-doc :not(pre) > code:hover {
