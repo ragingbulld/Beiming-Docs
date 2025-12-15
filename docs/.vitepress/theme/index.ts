@@ -4,68 +4,80 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import './style/index.css'
+
+/* ====== 你的组件 / 插件 ====== */
 import Confetti from "./components/Confetti.vue"
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+
+/* ====== image viewer ====== */
+import 'viewerjs/dist/viewer.min.css'
+import imageViewer from 'vitepress-plugin-image-viewer'
+import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
+
+/* ====== VitePress & Vue ====== */
+import { useData, useRoute } from 'vitepress'
+import { inBrowser } from "vitepress"
 import { onMounted, watch, nextTick } from 'vue'
-import mediumZoom from 'medium-zoom'
-import { inBrowser } from "vitepress";
-import { NProgress } from "nprogress-v2/dist/index.js"; // 进度条组件
-import "nprogress-v2/dist/index.css"; // 进度条样式
+
+/* ====== NProgress ====== */
+import { NProgress } from "nprogress-v2/dist/index.js"
+import "nprogress-v2/dist/index.css"
 
 let homePageStyle: HTMLStyleElement | undefined
-export default {
+
+const theme: Theme = {
   extends: DefaultTheme,
+
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      // layout slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    app.component("Confetti", Confetti); 
+
+  enhanceApp({ app, router }) {
+    /* 注册全局组件 */
+    app.component("Confetti", Confetti)
+    app.component('vImageViewer', vImageViewer)
+
+    /* 进度条 */
     if (inBrowser) {
-      NProgress.configure({ showSpinner: false });
+      NProgress.configure({ showSpinner: false })
 
       router.onBeforeRouteChange = () => {
-        NProgress.start(); // 开始进度条
-      };
+        NProgress.start()
+      }
       router.onAfterRouteChange = () => {
-        NProgress.done(); // 停止进度条
-      };
+        NProgress.done()
+      }
     }
   },
+
   setup() {
-    // Get frontmatter and route
-    const { frontmatter } = useData();
-    const route = useRoute();
-    const initZoom = () => {
-      // 为所有图片增加缩放功能
-      mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
-    }
-    onMounted(() => {
-      initZoom()
-    })
-    watch(
-      () => route.path,
-      () => nextTick(() => initZoom())
-    )
-    // giscus配置
-    giscusTalk({
-      repo: 'ragingbulld/Beiming-Docs', //仓库
-      repoId: 'R_kgDOP4NWZA', //仓库ID
-      category: 'General', // 讨论分类
-      categoryId: 'DIC_kwDOP4NWZM4Cv--a', //讨论分类ID
-      mapping: 'pathname',
-      inputPosition: 'bottom',
-      lang: 'zh-CN',
-      }, 
+    /* ====== VitePress 数据 ====== */
+    const { frontmatter } = useData()
+    const route = useRoute()
+
+    /* ====== image viewer 启用 ====== */
+    imageViewer(route)
+
+    /* ====== giscus 评论 ====== */
+    giscusTalk(
       {
-        frontmatter, route
+        repo: 'ragingbulld/Beiming-Docs',
+        repoId: 'R_kgDOP4NWZA',
+        category: 'General',
+        categoryId: 'DIC_kwDOP4NWZM4Cv--a',
+        mapping: 'pathname',
+        inputPosition: 'bottom',
+        lang: 'zh-CN',
       },
-      //默认值为true，表示已启用，此参数可以忽略；
-      //如果为false，则表示未启用
-      //您可以使用“comment:true”序言在页面上单独启用它
+      {
+        frontmatter,
+        route
+      },
       true
-    );
+    )
   }
 }
+
+export default theme
