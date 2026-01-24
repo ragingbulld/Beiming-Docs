@@ -1,5 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
+import { h, onMounted, watch } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
@@ -15,15 +15,33 @@ import imageViewer from 'vitepress-plugin-image-viewer'
 import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
 
 /* ====== VitePress & Vue ====== */
-import { useData, useRoute } from 'vitepress'
+import { useData, useRoute, useRouter } from 'vitepress'
 import { inBrowser } from "vitepress"
-import { onMounted, watch, nextTick } from 'vue'
 
 /* ====== NProgress ====== */
 import { NProgress } from "nprogress-v2/dist/index.js"
 import "nprogress-v2/dist/index.css"
 
 let homePageStyle: HTMLStyleElement | undefined
+
+function updateHomePageStyle(value: boolean) {
+  if (value) {
+    if (homePageStyle) return
+
+    homePageStyle = document.createElement('style')
+    homePageStyle.innerHTML = `
+      :root {
+        animation: rainbow 12s linear infinite;
+      }
+    `
+    document.body.appendChild(homePageStyle)
+  } else {
+    if (!homePageStyle) return
+
+    homePageStyle.remove()
+    homePageStyle = undefined
+  }
+}
 
 const theme: Theme = {
   extends: DefaultTheme,
@@ -56,6 +74,7 @@ const theme: Theme = {
     /* ====== VitePress 数据 ====== */
     const { frontmatter } = useData()
     const route = useRoute()
+    const router = useRouter()
 
     /* ====== image viewer 启用 ====== */
     imageViewer(route)
@@ -77,6 +96,15 @@ const theme: Theme = {
       },
       true
     )
+
+    /* ====== 首页彩虹背景动画 ====== */
+    if (inBrowser) {
+      watch(
+        () => router.route.data.relativePath,
+        () => updateHomePageStyle(location.pathname === '/'),
+        { immediate: true },
+      )
+    }
   }
 }
 

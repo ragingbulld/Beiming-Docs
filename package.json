@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "canvas-confetti": "^1.9.4",
-    "vitepress": "^2.0.0-alpha.12",
+    "vitepress": "^1.6.4",
     "vitepress-sidebar": "^1.33.1"
   },
   "scripts": {
