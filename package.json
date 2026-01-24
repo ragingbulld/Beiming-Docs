@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "canvas-confetti": "^1.9.4",
+    "medium-zoom": "^1.1.0",
     "vitepress": "^1.6.4",
     "vitepress-sidebar": "^1.33.1"
   },
@@ -11,7 +12,6 @@
   },
   "dependencies": {
     "nprogress-v2": "^1.1.10",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15",
-    "vitepress-plugin-image-viewer": "^1.1.6"
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }

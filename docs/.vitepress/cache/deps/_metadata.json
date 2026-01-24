@@ -1,49 +1,49 @@
 {
-  "hash": "bae093f5",
+  "hash": "ca666582",
   "configHash": "41e228d9",
-  "lockfileHash": "b12a12bf",
-  "browserHash": "b5d4e497",
+  "lockfileHash": "a2b8435a",
+  "browserHash": "8dfa499a",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3f9c9e75",
+      "fileHash": "0da1f98f",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "f5ef9d03",
+      "fileHash": "32a18e37",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "b232b3a3",
+      "fileHash": "cd2efa55",
       "needsInterop": false
     },
     "vitepress-plugin-comment-with-giscus": {
       "src": "../../../../node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
       "file": "vitepress-plugin-comment-with-giscus.js",
-      "fileHash": "9982b416",
-      "needsInterop": false
-    },
-    "vitepress-plugin-image-viewer": {
-      "src": "../../../../node_modules/vitepress-plugin-image-viewer/lib/viewer.js",
-      "file": "vitepress-plugin-image-viewer.js",
-      "fileHash": "a65cd2aa",
+      "fileHash": "64383d9e",
       "needsInterop": false
     },
     "nprogress-v2/dist/index.js": {
       "src": "../../../../node_modules/nprogress-v2/dist/index.js",
       "file": "nprogress-v2_dist_index__js.js",
-      "fileHash": "ee147d4f",
+      "fileHash": "7f8b39b4",
       "needsInterop": true
+    },
+    "medium-zoom": {
+      "src": "../../../../node_modules/medium-zoom/dist/medium-zoom.esm.js",
+      "file": "medium-zoom.js",
+      "fileHash": "ff223cfc",
+      "needsInterop": false
     },
     "canvas-confetti": {
       "src": "../../../../node_modules/canvas-confetti/dist/confetti.module.mjs",
       "file": "canvas-confetti.js",
-      "fileHash": "84d4a44b",
+      "fileHash": "65b14fa5",
       "needsInterop": false
     }
   },

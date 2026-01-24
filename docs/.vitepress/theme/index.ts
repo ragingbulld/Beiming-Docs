@@ -9,11 +9,6 @@ import './style/index.css'
 import Confetti from "./components/Confetti.vue"
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 
-/* ====== image viewer ====== */
-import 'viewerjs/dist/viewer.min.css'
-import imageViewer from 'vitepress-plugin-image-viewer'
-import vImageViewer from 'vitepress-plugin-image-viewer/lib/vImageViewer.vue'
-
 /* ====== VitePress & Vue ====== */
 import { useData, useRoute } from 'vitepress'
 import { inBrowser } from "vitepress"
@@ -22,6 +17,8 @@ import { onMounted, watch, nextTick } from 'vue'
 /* ====== NProgress ====== */
 import { NProgress } from "nprogress-v2/dist/index.js"
 import "nprogress-v2/dist/index.css"
+
+import mediumZoom from 'medium-zoom'
 
 let homePageStyle: HTMLStyleElement | undefined
 
@@ -37,7 +34,6 @@ const theme: Theme = {
   enhanceApp({ app, router }) {
     /* 注册全局组件 */
     app.component("Confetti", Confetti)
-    app.component('vImageViewer', vImageViewer)
 
     /* 进度条 */
     if (inBrowser) {
@@ -55,10 +51,23 @@ const theme: Theme = {
   setup() {
     /* ====== VitePress 数据 ====== */
     const { frontmatter } = useData()
-    const route = useRoute()
+    const route = useRoute() // 确保这里获取了路由对象
 
-    /* ====== image viewer 启用 ====== */
-    imageViewer(route)
+    /* ====== 图片缩放 (Medium Zoom) ====== */
+    const initZoom = () => {
+      // 为 .main 容器下的所有图片增加缩放功能
+      // 也可以根据需求修改选择器，例如 '.vp-doc img'
+      mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
+    }
+
+    onMounted(() => {
+      initZoom()
+    })
+
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
 
     /* ====== giscus 评论 ====== */
     giscusTalk(
