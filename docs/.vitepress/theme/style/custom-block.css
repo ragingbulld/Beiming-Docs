@@ -4,16 +4,23 @@
   --vp-custom-block-tip-code-bg: transparent;
 }
 .custom-block.tip a {
-	color: var(--vp-c-green-1);
+  color: var(--vp-c-green-1);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
+
 .custom-block.tip a:hover {
-  color: var(--vp-c-green-3); 
+  color: var(--vp-c-green-3);
+  border-bottom-color: var(--vp-c-green-3);
 }
 .dark .custom-block.tip a {
 	color: var(--vp-c-green-3) !important;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 .dark .custom-block.tip a:hover {
   color: var(--vp-c-green-1) !important; 
+  border-bottom-color: var(--vp-c-green-1);
 }
 .custom-block.tip code {
 	color: var(--vp-c-green-1);
@@ -41,15 +48,21 @@
 }
 .custom-block.warning a {
 	color: var(--vp-c-yellow-3);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 .custom-block.warning a:hover {
   color: var(--vp-c-yellow-2); 
+  border-bottom-color: var(--vp-c-yellow-2);
 }
 .dark .custom-block.warning a {
 	color: var(--vp-c-yellow-1) !important;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 .dark.custom-block.warning a:hover {
   color: var(--vp-c-yellow-3) !important; 
+  border-bottom-color: var(--vp-c-yellow-3);
 }
 .custom-block.warning code {
 	color: var(--vp-c-yellow-3);
@@ -78,15 +91,21 @@
 }
 .custom-block.danger a {
 	color: var(--vp-c-red-1);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 .custom-block.danger a:hover {
   color: var(--vp-c-red-3); 
+  border-bottom-color: var(--vp-c-red-3);
 }
 .dark .custom-block.danger a {
 	color: var(--vp-c-red-3) !important;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 .dark .custom-block.danger a:hover {
   color: var(--vp-c-red-1) !important;
+  border-bottom-color: var(--vp-c-red-1);
 }
 .custom-block.danger code {
 	color: var(--vp-c-red-1);

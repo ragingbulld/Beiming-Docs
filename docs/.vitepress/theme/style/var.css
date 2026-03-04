@@ -2,12 +2,14 @@
 /* 普通链接 */
 .vp-doc a {
   text-decoration: none;
-  color: #ff6f61; /* 主体粉橙 */
+  color: #ff9378; /* 主体粉橙 */
   transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1.5px solid transparent;
 }
 
 .vp-doc a:hover {
-  color: #ff9980; /* 悬停时亮粉橙 */
+  color: #ff6f61; /* 悬停时亮粉橙 */
+  border-bottom-color: #ff6f61;
 }
 
 /* 链接中的 code */
@@ -64,6 +66,7 @@
 
 .dark .vp-doc a:hover {
   color: #ffb199; /* 悬停亮粉橙 */
+  border-bottom-color: #ffb199;
 }
 
 .dark .vp-doc a > code {
