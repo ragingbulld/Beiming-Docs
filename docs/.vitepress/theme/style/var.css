@@ -2,14 +2,15 @@
 /* 普通链接 */
 .vp-doc a {
   text-decoration: none;
-  color: #ff9378; /* 主体粉橙 */
+  color: #ff6f61; /* 主体粉橙 */
   transition: color 0.2s ease, border-color 0.2s ease;
   border-bottom: 1.5px solid transparent;
+  font-weight: bolder;
 }
 
 .vp-doc a:hover {
-  color: #ff6f61; /* 悬停时亮粉橙 */
-  border-bottom-color: #ff6f61;
+  color: #ff5040; /* 悬停时亮粉橙 */
+  border-bottom-color: #ff5040;
 }
 
 .vp-doc a:has(code):hover {

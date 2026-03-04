@@ -5,8 +5,6 @@
 }
 .custom-block.tip a {
   color: #15803d; 
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
 
 .custom-block.tip a:hover {
@@ -17,7 +15,6 @@
 /* --- 深色（夜晚）模式：逻辑保持清透 --- */
 .dark .custom-block.tip a {
   color: #4ade80 !important; 
-  border-bottom: 1px solid transparent;
 }
 
 .dark .custom-block.tip a:hover {
@@ -51,8 +48,6 @@
 /* --- 浅色（白天）模式：明黄 -> 深金黄（依然保持黄色感） --- */
 .custom-block.warning a {
   color: #ca8a04; /* 核心黄色：明亮但不刺眼 */
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
 
 .custom-block.warning a:hover {
@@ -63,7 +58,6 @@
 /* --- 深色（夜晚）模式：亮黄 -> 柠檬白（发光感） --- */
 .dark .custom-block.warning a {
   color: #eab308 !important; /* 标准黄色 */
-  border-bottom: 1px solid transparent;
 }
 
 .dark .custom-block.warning a:hover {
@@ -98,8 +92,6 @@
 /* --- 浅色（白天）模式：正红 -> 深红/酒红（变黑） --- */
 .custom-block.danger a {
   color: #dc2626; /* 标准警告红：醒目且专业 */
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
 
 .custom-block.danger a:hover {
@@ -110,7 +102,6 @@
 /* --- 深色（夜晚）模式：珊瑚红 -> 浅粉红/白红（变白） --- */
 .dark .custom-block.danger a {
   color: #f87171 !important; /* 柔和的珊瑚红：深夜不刺眼 */
-  border-bottom: 1px solid transparent;
 }
 
 .dark .custom-block.danger a:hover {
