@@ -4,26 +4,28 @@
   --vp-custom-block-tip-code-bg: transparent;
 }
 .custom-block.tip a {
-  color: var(--vp-c-green-1);
+  color: #15803d; 
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
 .custom-block.tip a:hover {
-  color: var(--vp-c-green-3);
-  border-bottom-color: var(--vp-c-green-3);
+  color: #064e3b; 
+  border-bottom-color: #064e3b;
 }
+
+/* --- 深色（夜晚）模式：逻辑保持清透 --- */
 .dark .custom-block.tip a {
-	color: var(--vp-c-green-3) !important;
+  color: #4ade80 !important; 
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
+
 .dark .custom-block.tip a:hover {
-  color: var(--vp-c-green-1) !important; 
-  border-bottom-color: var(--vp-c-green-1);
+  color: #bbf7d0 !important; 
+  border-bottom-color: #bbf7d0;
 }
 .custom-block.tip code {
-	color: var(--vp-c-green-1);
+	color: var(--vp-c-green-2);
   background-color: transparent;
 	border-color: var(--vp-c-green-3);
 }
@@ -46,28 +48,32 @@
 .custom-block.tip {
   border-color: var(--vp-c-green-2);
 }
+/* --- 浅色（白天）模式：明黄 -> 深金黄（依然保持黄色感） --- */
 .custom-block.warning a {
-	color: var(--vp-c-yellow-3);
+  color: #ca8a04; /* 核心黄色：明亮但不刺眼 */
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
+
 .custom-block.warning a:hover {
-  color: var(--vp-c-yellow-2); 
-  border-bottom-color: var(--vp-c-yellow-2);
+  color: #854d0e; /* 悬停后：深金黄色（偏向暗金，视觉变重，但色相仍在黄色区） */
+  border-bottom-color: #854d0e;
 }
+
+/* --- 深色（夜晚）模式：亮黄 -> 柠檬白（发光感） --- */
 .dark .custom-block.warning a {
-	color: var(--vp-c-yellow-1) !important;
+  color: #eab308 !important; /* 标准黄色 */
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
-.dark.custom-block.warning a:hover {
-  color: var(--vp-c-yellow-3) !important; 
-  border-bottom-color: var(--vp-c-yellow-3);
+
+.dark .custom-block.warning a:hover {
+  color: #fef08a !important; /* 悬停后：奶油亮黄，极高亮度 */
+  border-bottom-color: #fef08a;
 }
 .custom-block.warning code {
-	color: var(--vp-c-yellow-3);
+	color: #ca8a04;
   background-color: transparent;
-	border-color: var(--vp-c-yellow-1);
+	border-color: #ca8a04;
 }
 .custom-block.warning code:hover {
   color: #fff;
@@ -89,26 +95,30 @@
   /* border-color: #d97706; */
   border-color: var(--vp-c-yellow-2);
 }
+/* --- 浅色（白天）模式：正红 -> 深红/酒红（变黑） --- */
 .custom-block.danger a {
-	color: var(--vp-c-red-1);
+  color: #dc2626; /* 标准警告红：醒目且专业 */
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
+
 .custom-block.danger a:hover {
-  color: var(--vp-c-red-3); 
-  border-bottom-color: var(--vp-c-red-3);
+  color: #7f1d1d; /* 悬停后：深酒红色，产生极强的“危险警告”压实感 */
+  border-bottom-color: #7f1d1d;
 }
+
+/* --- 深色（夜晚）模式：珊瑚红 -> 浅粉红/白红（变白） --- */
 .dark .custom-block.danger a {
-	color: var(--vp-c-red-3) !important;
+  color: #f87171 !important; /* 柔和的珊瑚红：深夜不刺眼 */
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
+
 .dark .custom-block.danger a:hover {
-  color: var(--vp-c-red-1) !important;
-  border-bottom-color: var(--vp-c-red-1);
+  color: #fecaca !important; /* 悬停后：极浅粉白，像发光的警告灯 */
+  border-bottom-color: #fecaca;
 }
 .custom-block.danger code {
-	color: var(--vp-c-red-1);
+	color: var(--vp-c-red-2);
   background-color: transparent;
 	border-color: var(--vp-c-red-3);
 }
