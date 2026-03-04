@@ -4,16 +4,16 @@
   --vp-custom-block-tip-code-bg: transparent;
 }
 .custom-block.tip a {
-	color: var(--vp-c-green-3);
+	color: var(--vp-c-green-1);
 }
 .custom-block.tip a:hover {
-  color: var(--vp-c-green-1); 
+  color: var(--vp-c-green-3); 
 }
 .dark .custom-block.tip a {
-	color: var(--vp-c-green-1) !important;
+	color: var(--vp-c-green-3) !important;
 }
 .dark .custom-block.tip a:hover {
-  color: var(--vp-c-green-3) !important; 
+  color: var(--vp-c-green-1) !important; 
 }
 .custom-block.tip code {
 	color: var(--vp-c-green-1);
@@ -43,7 +43,7 @@
 	color: var(--vp-c-yellow-3);
 }
 .custom-block.warning a:hover {
-  color: var(--vp-c-yellow-1); 
+  color: var(--vp-c-yellow-2); 
 }
 .dark .custom-block.warning a {
 	color: var(--vp-c-yellow-1) !important;
@@ -77,16 +77,16 @@
   border-color: var(--vp-c-yellow-2);
 }
 .custom-block.danger a {
-	color: var(--vp-c-red-3);
+	color: var(--vp-c-red-1);
 }
 .custom-block.danger a:hover {
-  color: var(--vp-c-red-1); 
+  color: var(--vp-c-red-3); 
 }
 .dark .custom-block.danger a {
-	color: var(--vp-c-red-1) !important;
+	color: var(--vp-c-red-3) !important;
 }
 .dark .custom-block.danger a:hover {
-  color: var(--vp-c-red-3) !important;
+  color: var(--vp-c-red-1) !important;
 }
 .custom-block.danger code {
 	color: var(--vp-c-red-1);
