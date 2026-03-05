@@ -4,7 +4,7 @@
   text-decoration: none;
   color: #ff6f61; /* 主体粉橙 */
   transition: color 0.2s ease, border-color 0.2s ease;
-  border-bottom: 1.px solid transparent;
+  border-bottom: 1.5px solid transparent;
   font-weight: bolder;
 }
 
