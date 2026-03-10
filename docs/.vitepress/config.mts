@@ -62,8 +62,8 @@ const baseConfig = {
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ragingbulld/Beiming-Docs' },
-      { icon: 'bilibili', link: 'https://b23.tv/6ld3Ns8' },
-      { icon: 'qq', link: 'https://qm.qq.com/q/PFHxrAUwi6' }
+      { icon: 'qq', link: 'https://qm.qq.com/q/PFHxrAUwi6' },
+      { icon: 'bilibili', link: 'https://b23.tv/6ld3Ns8' }
     ],
     footer: { copyright: '© 2025 北冥·群组服' }
   }
