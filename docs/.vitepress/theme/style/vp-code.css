@@ -1,42 +1,72 @@
 /* .vitepress/theme/style/vp-code.css */
 
-/* 代码块：增加留空边距 增加阴影 */
+/* 代码块：轻薄边框 + 微投影，去掉厚重阴影 */
 .vp-doc div[class*=language-] {
-  box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
-  padding-top: 20px;
+  box-shadow: none;
+  border: 1px solid var(--vp-code-block-divider-color);
+  border-radius: 12px;
+  padding-top: 16px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
 }
 
-/* 代码块：添加macOS风格的小圆点 */
+.vp-doc div[class*=language-]:hover {
+  border-color: var(--vp-c-brand-2, var(--vp-c-brand));
+}
+
+/* 代码块顶部装饰条：淡色底色 + 细 macOS 圆点 */
 .vp-doc div[class*=language-]::before {
   content: "";
   display: block;
   position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 12px;
-  height: 12px;
-  background-color: #ff5f56;
+  top: 14px;
+  left: 16px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255 96 86 / 0.85);
   border-radius: 50%;
-  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  box-shadow:
+    18px 0 0 rgb(255 189 46 / 0.85),
+    36px 0 0 rgb(40 201 63 / 0.85);
   z-index: 1;
+}
+
+/* 代码块：语言标签放到更协调的位置 */
+.vp-doc div[class*=language-] > .lang {
+  top: 11px;
+  right: 16px;
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  background: transparent;
+  padding: 0;
 }
 
 /* 代码块：下移行号 隐藏右侧竖线 */
 .vp-doc .line-numbers-wrapper {
-  padding-top: 40px;
+  padding-top: 36px;
   border-right: none;
 }
 
-/* 代码块：重建行号右侧竖线 */
+/* 代码块：重建行号右侧竖线（更柔和） */
 .vp-doc .line-numbers-wrapper::after {
   content: "";
   position: absolute;
-  top: 40px;
+  top: 36px;
   right: 0;
   border-right: 1px solid var(--vp-code-block-divider-color);
-  height: calc(100% - 60px);
+  height: calc(100% - 56px);
+  opacity: 0.6;
 }
 
 .vp-doc div[class*='language-'].line-numbers-mode {
   margin-bottom: 20px;
+}
+
+/* 暗色模式下边框稍微明显一点，但阴影仍然保持很轻 */
+.dark .vp-doc div[class*=language-] {
+  border-color: var(--vp-c-divider);
+}
+
+.dark .vp-doc div[class*=language-]:hover {
+  border-color: var(--vp-c-brand-2, var(--vp-c-brand));
 }
